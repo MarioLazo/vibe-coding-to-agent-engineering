@@ -470,7 +470,31 @@
             </ul>
         </section>
 
-        <!-- Slide 3: Begin with Why - Title -->
+        <!-- Slide 3: The Karpathy Arc -->
+        <section class="slide slide-title">
+            <h2>The Karpathy Arc: One Year, One Paradigm Shift</h2>
+            <div class="comparison-grid" style="margin-top: 30px;">
+                <div class="comparison-box bad" style="text-align: center;">
+                    <p style="font-size: 1rem; color: #888; margin-bottom: 10px;">February 2025</p>
+                    <h3 style="font-size: 2rem;">VIBE CODING</h3>
+                    <p style="font-size: 1.2rem; font-style: italic; margin-top: 20px;">
+                        "Fully give in to the vibes, embrace exponentials, and forget that the code even exists."
+                    </p>
+                </div>
+                <div class="comparison-box good" style="text-align: center;">
+                    <p style="font-size: 1rem; color: #888; margin-bottom: 10px;">February 2026</p>
+                    <h3 style="font-size: 2rem;">AGENTIC ENGINEERING</h3>
+                    <p style="font-size: 1.2rem; font-style: italic; margin-top: 20px;">
+                        "You are orchestrating agents who write code and acting as oversight. This is a skill you can learn."
+                    </p>
+                </div>
+            </div>
+            <p style="margin-top: 40px; font-size: 1.5rem; color: #00d4ff; text-align: center;">
+                → This course is the bridge.
+            </p>
+        </section>
+
+        <!-- Slide 4: Begin with Why - Title -->
         <section class="slide slide-why">
             <div class="icon">🤔</div>
             <h1>Begin with the WHY</h1>
@@ -572,7 +596,42 @@
             </div>
         </section>
 
-        <!-- Slide 8: History Title -->
+        <!-- Slide: The Agentic Engineering Workflow -->
+        <section class="slide slide-accent">
+            <h2>🔄 The Agentic Engineering Workflow</h2>
+            <p style="text-align: center; color: #888; margin-bottom: 30px;">Addy Osmani, Google Cloud AI</p>
+            <div class="feature-grid">
+                <div class="feature-card" style="border-left: 4px solid #00d4ff;">
+                    <h3 style="color: #00d4ff;">1. PLAN</h3>
+                    <p>Write a spec before prompting<br>Break work into defined tasks<br>Decide architecture first</p>
+                </div>
+                <div class="feature-card" style="border-left: 4px solid #7c3aed;">
+                    <h3 style="color: #7c3aed;">2. DIRECT & REVIEW</h3>
+                    <p>Give scoped tasks to the agent<br>Review output like a human PR<br><strong>If you can't explain it, reject it</strong></p>
+                </div>
+                <div class="feature-card" style="border-left: 4px solid #3fb950;">
+                    <h3 style="color: #3fb950;">3. TEST</h3>
+                    <p>The single biggest differentiator<br>Agents iterate until tests pass<br><strong>Tests turn unreliable agents into reliable systems</strong></p>
+                </div>
+                <div class="feature-card" style="border-left: 4px solid #ffa657;">
+                    <h3 style="color: #ffa657;">4. OWN</h3>
+                    <p>Maintain documentation<br>Use version control and CI<br><strong>You are responsible for the system</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide: The Tuesday Test -->
+        <section class="slide slide-comparison">
+            <div class="icon">🤔</div>
+            <h1 style="font-size: 2.8rem;">Would you deploy this agent<br>on a Tuesday at 3pm?</h1>
+            <div class="highlight-box" style="margin-top: 40px;">
+                <p style="font-size: 1.6rem; text-align: center;">
+                    If the answer is not a confident <strong style="color: #3fb950;">YES</strong>, you are not done.
+                </p>
+            </div>
+        </section>
+
+        <!-- Slide: History Title -->
         <section class="slide slide-timeline">
             <div class="icon">📜</div>
             <h1>History of Context-Based LLM Coding</h1>
@@ -646,7 +705,7 @@
             </ul>
         </section>
 
-        <!-- Slide 12: What is Agent Engineering -->
+        <!-- Slide: What is Agent Engineering -->
         <section class="slide slide-accent">
             <h2>🔧 What is "Agent Engineering"?</h2>
             <div class="highlight-box">
@@ -663,7 +722,202 @@
             </ul>
         </section>
 
-        <!-- Slide 13: What is OpenHands -->
+        <!-- Slide: Same Task, Two Approaches -->
+        <section class="slide slide-comparison">
+            <h2>Same Task, Two Approaches</h2>
+            <div class="comparison-grid">
+                <div class="comparison-box bad">
+                    <h3>❌ VIBE CODING</h3>
+                    <p style="font-size: 1.1rem; font-family: monospace; margin: 15px 0;">
+                        "Generate unit tests for this function"
+                    </p>
+                    <p style="font-size: 1rem; color: #aaa;">
+                        → Accept all output<br>
+                        → Run tests. Some fail.<br>
+                        → Paste errors back to LLM<br>
+                        → Accept new output<br>
+                        → Tests pass. Ship it.
+                    </p>
+                    <p style="font-size: 0.9rem; color: #f85149; margin-top: 15px; border-top: 1px solid #333; padding-top: 10px;">
+                        No spec. No review. No versioning.
+                    </p>
+                </div>
+                <div class="comparison-box good">
+                    <h3>✅ AGENTIC ENGINEERING</h3>
+                    <p style="font-size: 1.1rem; font-family: monospace; margin: 15px 0;">
+                        Spec: coverage targets, edge cases, output format, pass/fail criteria
+                    </p>
+                    <p style="font-size: 1rem; color: #aaa;">
+                        → Scoped task to agent<br>
+                        → Review output vs. spec<br>
+                        → Run tests + mutation tests<br>
+                        → Version prompt in Git<br>
+                        → Iterate with data
+                    </p>
+                    <p style="font-size: 0.9rem; color: #3fb950; margin-top: 15px; border-top: 1px solid #333; padding-top: 10px;">
+                        Specified. Reviewed. Versioned. Measured.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide: The 4 Modes Framework (Expanded) -->
+        <section class="slide slide-dark">
+            <h2>🎯 The 4 Modes Framework</h2>
+            <p style="text-align: center; color: #888; margin-bottom: 25px;">Your classification tool for the entire course</p>
+            <table style="font-size: 1rem;">
+                <tr>
+                    <th>Mode</th>
+                    <th>Agent Does</th>
+                    <th>You Own</th>
+                    <th>Project</th>
+                </tr>
+                <tr>
+                    <td style="color: #3fb950;"><strong>DOING</strong></td>
+                    <td>Executes one defined task</td>
+                    <td>Defining scope & guardrails</td>
+                    <td>Project 1</td>
+                </tr>
+                <tr>
+                    <td style="color: #7c3aed;"><strong>DECIDING</strong></td>
+                    <td>Recommends; you approve</td>
+                    <td>The approval decision</td>
+                    <td>Project 2</td>
+                </tr>
+                <tr>
+                    <td style="color: #ffa657;"><strong>DELEGATING</strong></td>
+                    <td>Coordinates sub-agents</td>
+                    <td>Oversight & kill switches</td>
+                    <td>Project 3</td>
+                </tr>
+                <tr>
+                    <td style="color: #f85149;"><strong>DESIGNING</strong></td>
+                    <td>This is always you</td>
+                    <td>Everything: constraints, ethics</td>
+                    <td>Always</td>
+                </tr>
+            </table>
+            <p style="margin-top: 25px; font-size: 1.3rem; color: #00d4ff; text-align: center;">
+                Agents gain autonomy. <strong>Humans gain responsibility.</strong>
+            </p>
+        </section>
+
+        <!-- Slide: The Dev Shop Ecosystem -->
+        <section class="slide slide-dark">
+            <h2>🏢 The Enterprise Dev Shop Ecosystem</h2>
+            <p style="text-align: center; color: #888; margin-bottom: 20px;">Where agents live in the real world</p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; max-width: 1000px;">
+                <div class="feature-card" style="padding: 15px;">
+                    <h3 style="font-size: 1.1rem;">📋 Business Analyst</h3>
+                    <p style="font-size: 0.9rem;">Agent: Requirements extraction</p>
+                    <p style="font-size: 0.85rem; color: #f85149;">Risk: Plausible but wrong reqs</p>
+                </div>
+                <div class="feature-card" style="padding: 15px;">
+                    <h3 style="font-size: 1.1rem;">🏗️ Solution Architect</h3>
+                    <p style="font-size: 0.9rem;">Agent: Pattern review, design assist</p>
+                    <p style="font-size: 0.85rem; color: #f85149;">Risk: Hallucinated patterns</p>
+                </div>
+                <div class="feature-card" style="padding: 15px;">
+                    <h3 style="font-size: 1.1rem;">👔 Engineering Manager</h3>
+                    <p style="font-size: 0.9rem;">Agent: Triage, sprint planning</p>
+                    <p style="font-size: 0.85rem; color: #f85149;">Risk: Wrong priorities cascade</p>
+                </div>
+                <div class="feature-card" style="padding: 15px;">
+                    <h3 style="font-size: 1.1rem;">👨‍💻 Developers (Onshore)</h3>
+                    <p style="font-size: 0.9rem;">Agent: Code gen, tests, refactoring</p>
+                    <p style="font-size: 0.85rem; color: #f85149;">Risk: Logic errors, security vulns</p>
+                </div>
+                <div class="feature-card" style="padding: 15px;">
+                    <h3 style="font-size: 1.1rem;">🌏 Developers (Offshore)</h3>
+                    <p style="font-size: 0.9rem;">Agent: Docs, handoff summaries</p>
+                    <p style="font-size: 0.85rem; color: #f85149;">Risk: Amplified miscommunication</p>
+                </div>
+                <div class="feature-card" style="padding: 15px;">
+                    <h3 style="font-size: 1.1rem;">🧪 QA / Testers</h3>
+                    <p style="font-size: 0.9rem;">Agent: Test case gen, regression</p>
+                    <p style="font-size: 0.85rem; color: #f85149;">Risk: False confidence from AI tests</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide: 5 Architecture Questions -->
+        <section class="slide slide-accent">
+            <h2>📐 The 5 Architecture Questions</h2>
+            <p style="text-align: center; color: #888; margin-bottom: 25px;">Answer all five BEFORE writing a single line of code</p>
+            <div style="max-width: 800px;">
+                <div class="why-card" style="margin-bottom: 12px; border-left-color: #00d4ff;">
+                    <h3 style="color: #00d4ff; font-size: 1.2rem;">1. What task does the agent perform?</h3>
+                    <p style="font-size: 1rem; color: #888;">Prevents scope creep</p>
+                </div>
+                <div class="why-card" style="margin-bottom: 12px; border-left-color: #7c3aed;">
+                    <h3 style="color: #7c3aed; font-size: 1.2rem;">2. What are the inputs and outputs?</h3>
+                    <p style="font-size: 1rem; color: #888;">Defines testable contract</p>
+                </div>
+                <div class="why-card" style="margin-bottom: 12px; border-left-color: #3fb950;">
+                    <h3 style="color: #3fb950; font-size: 1.2rem;">3. What are the boundaries?</h3>
+                    <p style="font-size: 1rem; color: #888;">What it should NOT do</p>
+                </div>
+                <div class="why-card" style="margin-bottom: 12px; border-left-color: #ffa657;">
+                    <h3 style="color: #ffa657; font-size: 1.2rem;">4. What does success look like?</h3>
+                    <p style="font-size: 1rem; color: #888;">Measurable criteria</p>
+                </div>
+                <div class="why-card" style="border-left-color: #f85149;">
+                    <h3 style="color: #f85149; font-size: 1.2rem;">5. How will I observe execution?</h3>
+                    <p style="font-size: 1rem; color: #888;">Can't fix invisible</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide: The Pre-Mortem -->
+        <section class="slide slide-why">
+            <h2>💀 The Pre-Mortem</h2>
+            <p style="text-align: center; color: #888; margin-bottom: 20px;">Predicting failure before you build — Gary Klein, cognitive psychologist</p>
+            <div class="highlight-box" style="max-width: 800px;">
+                <p style="font-size: 1.2rem; text-align: center; font-style: italic;">
+                    "Unlike a typical critique where team members are asked what <em>might</em> go wrong, 
+                    the pre-mortem operates on the assumption that the patient has died, 
+                    and asks what <em>did</em> go wrong."
+                </p>
+                <p style="text-align: center; color: #888; margin-top: 15px;">— Harvard Business Review, 2007</p>
+            </div>
+            <p style="text-align: center; margin-top: 25px; font-size: 1.4rem; color: #3fb950;">
+                <strong>30%</strong> improvement in correctly identifying outcome reasons
+            </p>
+        </section>
+
+        <!-- Slide: Agent Failure Categories -->
+        <section class="slide slide-dark">
+            <h2>⚠️ Agent-Specific Failure Categories</h2>
+            <p style="text-align: center; color: #888; margin-bottom: 20px;">Use these to guide your pre-mortem thinking</p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; max-width: 1000px;">
+                <div class="feature-card" style="padding: 15px; border-left: 3px solid #f85149;">
+                    <h3 style="font-size: 1.1rem; color: #f85149;">Hallucination</h3>
+                    <p style="font-size: 0.95rem;">Generates a function signature that doesn't exist</p>
+                </div>
+                <div class="feature-card" style="padding: 15px; border-left: 3px solid #ffa657;">
+                    <h3 style="font-size: 1.1rem; color: #ffa657;">Scope Drift</h3>
+                    <p style="font-size: 0.95rem;">Asked to add docstrings, also refactors the code</p>
+                </div>
+                <div class="feature-card" style="padding: 15px; border-left: 3px solid #7c3aed;">
+                    <h3 style="font-size: 1.1rem; color: #7c3aed;">Silent Failure</h3>
+                    <p style="font-size: 0.95rem;">Tests pass but don't actually test behavior</p>
+                </div>
+                <div class="feature-card" style="padding: 15px; border-left: 3px solid #00d4ff;">
+                    <h3 style="font-size: 1.1rem; color: #00d4ff;">Edge Cases</h3>
+                    <p style="font-size: 0.95rem;">Breaks on empty files or non-ASCII characters</p>
+                </div>
+                <div class="feature-card" style="padding: 15px; border-left: 3px solid #3fb950;">
+                    <h3 style="font-size: 1.1rem; color: #3fb950;">Dependencies</h3>
+                    <p style="font-size: 0.95rem;">API rate limited, context window exceeded</p>
+                </div>
+                <div class="feature-card" style="padding: 15px; border-left: 3px solid #ff6b6b;">
+                    <h3 style="font-size: 1.1rem; color: #ff6b6b;">Overconfidence</h3>
+                    <p style="font-size: 0.95rem;">Generates plausible code for unknown domains</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide: What is OpenHands -->
         <section class="slide slide-dark">
             <h2>🤝 What is OpenHands?</h2>
             <p style="font-size: 1.4rem; max-width: 900px; text-align: center; margin-bottom: 40px;">
