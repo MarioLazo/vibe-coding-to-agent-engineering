@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Vibe Coding to Agent Engineering - OpenHands Introduction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            position: relative;
+        }
+
+        /* Slide themes */
+        .slide-title {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .slide-dark {
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+        }
+
+        .slide-accent {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f2027 100%);
+        }
+
+        .slide-code {
+            background: #1e1e1e;
+        }
+
+        .slide-comparison {
+            background: linear-gradient(135deg, #2d1f3d 0%, #1a1a2e 100%);
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: #00d4ff;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #a78bfa;
+        }
+
+        p, li {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: #888;
+            margin-bottom: 40px;
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            text-align: left;
+            max-width: 900px;
+        }
+
+        li {
+            margin: 15px 0;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+        }
+
+        /* Code blocks */
+        pre {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            overflow-x: auto;
+            max-width: 90%;
+            text-align: left;
+        }
+
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+            color: #e6edf3;
+        }
+
+        .keyword { color: #ff7b72; }
+        .string { color: #a5d6ff; }
+        .function { color: #d2a8ff; }
+        .comment { color: #8b949e; }
+        .variable { color: #ffa657; }
+
+        /* Comparison tables */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+        }
+
+        .comparison-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            border: 2px solid;
+        }
+
+        .comparison-box.bad {
+            border-color: #f85149;
+        }
+
+        .comparison-box.good {
+            border-color: #3fb950;
+        }
+
+        .comparison-box h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .comparison-box.bad h3 { color: #f85149; }
+        .comparison-box.good h3 { color: #3fb950; }
+
+        /* Feature cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 1.1rem;
+            color: #aaa;
+        }
+
+        /* Architecture diagram */
+        .architecture {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 700px;
+        }
+
+        .arch-layer {
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid #00d4ff;
+            border-radius: 12px;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .arch-layer:nth-child(2) { border-color: #7c3aed; }
+        .arch-layer:nth-child(3) { border-color: #3fb950; }
+        .arch-layer:nth-child(4) { border-color: #ffa657; }
+
+        /* Navigation */
+        .nav-hint {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .slide-number {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Emoji icons */
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
+            border: 2px solid #00d4ff;
+            border-radius: 16px;
+            padding: 30px 50px;
+            margin: 20px 0;
+        }
+
+        /* Table */
+        table {
+            border-collapse: collapse;
+            font-size: 1.2rem;
+        }
+
+        th, td {
+            padding: 15px 30px;
+            text-align: left;
+            border: 1px solid #333;
+        }
+
+        th {
+            background: rgba(0, 212, 255, 0.2);
+            color: #00d4ff;
+        }
+
+        td {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            transition: width 0.3s ease;
+        }
+
+        /* Two column layout */
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            text-align: left;
+        }
+
+        .column h3 {
+            margin-bottom: 20px;
+        }
+
+        /* Prompt examples */
+        .prompt-example {
+            background: #0d1117;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            font-family: 'Fira Code', monospace;
+            font-size: 1rem;
+            border-left: 4px solid #00d4ff;
+        }
+
+        .prompt-example.bad {
+            border-left-color: #f85149;
+        }
+
+        .prompt-example.good {
+            border-left-color: #3fb950;
+        }
+
+        /* Logo placeholder */
+        .logo {
+            font-size: 5rem;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progress"></div>
+    
+    <div class="slide-container" id="slides">
+        
+        <!-- Slide 1: Title -->
+        <section class="slide slide-title">
+            <div class="logo">🤖</div>
+            <h1>From Vibe Coding to Agent Engineering</h1>
+            <p class="subtitle">An Introduction to OpenHands</p>
+            <p style="color: #666; margin-top: 40px;">Software Engineering Course</p>
+        </section>
+
+        <!-- Slide 2: Agenda -->
+        <section class="slide slide-dark">
+            <h2>📋 Today's Agenda</h2>
+            <ul>
+                <li>What is OpenHands?</li>
+                <li>Vibe Coding vs Agent Engineering</li>
+                <li>Types of Prompts (Good vs Bad)</li>
+                <li>Prerequisites & Setup</li>
+                <li>Hands-on Exercises</li>
+                <li>Best Practices & Takeaways</li>
+            </ul>
+        </section>
+
+        <!-- Slide 3: What is Vibe Coding -->
+        <section class="slide slide-comparison">
+            <h2>🎸 What is "Vibe Coding"?</h2>
+            <div class="highlight-box">
+                <p style="font-size: 1.6rem; text-align: center;">
+                    Unstructured, trial-and-error prompting with AI<br>
+                    <span style="color: #888;">"Just ask and hope for the best"</span>
+                </p>
+            </div>
+            <ul style="margin-top: 30px;">
+                <li>Vague prompts: "Make it work" or "Fix the bug"</li>
+                <li>No context provided to the AI</li>
+                <li>Random iteration without a plan</li>
+                <li>Copy-paste without understanding</li>
+            </ul>
+        </section>
+
+        <!-- Slide 4: What is Agent Engineering -->
+        <section class="slide slide-accent">
+            <h2>🔧 What is "Agent Engineering"?</h2>
+            <div class="highlight-box">
+                <p style="font-size: 1.6rem; text-align: center;">
+                    Systematic, context-aware development with AI agents<br>
+                    <span style="color: #888;">"Precise instructions with clear outcomes"</span>
+                </p>
+            </div>
+            <ul style="margin-top: 30px;">
+                <li>Specific, actionable prompts</li>
+                <li>Provide file paths, line numbers, context</li>
+                <li>Break tasks into manageable chunks</li>
+                <li>Iterative refinement with feedback</li>
+            </ul>
+        </section>
+
+        <!-- Slide 5: What is OpenHands -->
+        <section class="slide slide-dark">
+            <h2>🤝 What is OpenHands?</h2>
+            <p style="font-size: 1.4rem; max-width: 900px; text-align: center; margin-bottom: 40px;">
+                An open-source platform for building AI software development agents<br>
+                that interact with the world <strong style="color: #00d4ff;">like a human developer</strong>
+            </p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>💻 Writes Code</h3>
+                    <p>Creates and edits files in any language</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Executes Commands</h3>
+                    <p>Runs terminal commands and scripts</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌐 Browses Web</h3>
+                    <p>Searches docs and references</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔄 Version Control</h3>
+                    <p>Commits, branches, and PRs</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Key Differentiators -->
+        <section class="slide slide-dark">
+            <h2>⚡ What Makes OpenHands Different?</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>OpenHands</th>
+                    <th>Traditional AI</th>
+                </tr>
+                <tr>
+                    <td>Execution</td>
+                    <td style="color: #3fb950;">Actually runs code ✓</td>
+                    <td style="color: #f85149;">Only suggests code</td>
+                </tr>
+                <tr>
+                    <td>Model Lock-in</td>
+                    <td style="color: #3fb950;">Model agnostic ✓</td>
+                    <td style="color: #f85149;">Often locked</td>
+                </tr>
+                <tr>
+                    <td>Open Source</td>
+                    <td style="color: #3fb950;">MIT Licensed ✓</td>
+                    <td style="color: #f85149;">Often proprietary</td>
+                </tr>
+                <tr>
+                    <td>Safety</td>
+                    <td style="color: #3fb950;">Docker sandbox ✓</td>
+                    <td style="color: #888;">Varies</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Slide 7: Ways to Use OpenHands -->
+        <section class="slide slide-accent">
+            <h2>🛠️ Four Ways to Use OpenHands</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>1. CLI</h3>
+                    <p>Command-line interface like Claude Code</p>
+                </div>
+                <div class="feature-card">
+                    <h3>2. Local GUI</h3>
+                    <p>Web interface on your laptop</p>
+                </div>
+                <div class="feature-card">
+                    <h3>3. Cloud</h3>
+                    <p>Hosted at app.all-hands.dev</p>
+                </div>
+                <div class="feature-card">
+                    <h3>4. SDK</h3>
+                    <p>Python library for custom agents</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Architecture -->
+        <section class="slide slide-dark">
+            <h2>🏗️ SDK Architecture</h2>
+            <div class="architecture">
+                <div class="arch-layer">
+                    <strong>Agent</strong><br>
+                    <span style="font-size: 1rem; color: #888;">Reasoning + Planning + Tool Execution</span>
+                </div>
+                <div class="arch-layer">
+                    <strong>Tools</strong><br>
+                    <span style="font-size: 1rem; color: #888;">Terminal | FileEditor | Browser | ...</span>
+                </div>
+                <div class="arch-layer">
+                    <strong>Workspace</strong><br>
+                    <span style="font-size: 1rem; color: #888;">Local | Docker | Remote</span>
+                </div>
+                <div class="arch-layer">
+                    <strong>LLM (via LiteLLM)</strong><br>
+                    <span style="font-size: 1rem; color: #888;">Claude | GPT | Qwen | Devstral | ...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Bad Prompts -->
+        <section class="slide slide-comparison">
+            <h2>❌ Bad Prompts (Vibe Coding)</h2>
+            <div class="comparison-box bad" style="max-width: 800px;">
+                <h3>❌ Examples of What NOT to Do</h3>
+                <div class="prompt-example bad">"Make the code better"</div>
+                <div class="prompt-example bad">"Fix the bug"</div>
+                <div class="prompt-example bad">"Rewrite the entire backend"</div>
+                <div class="prompt-example bad">"There's a bug somewhere in auth"</div>
+            </div>
+            <p style="margin-top: 30px; color: #f85149;">
+                ⚠️ Too vague • No location • Not scoped • No context
+            </p>
+        </section>
+
+        <!-- Slide 10: Good Prompts -->
+        <section class="slide slide-accent">
+            <h2>✅ Good Prompts (Agent Engineering)</h2>
+            <div class="comparison-box good" style="max-width: 900px;">
+                <h3>✅ The Three Principles</h3>
+                <ul>
+                    <li><strong style="color: #3fb950;">Concrete</strong> – Describe specific functionality</li>
+                    <li><strong style="color: #3fb950;">Location-specific</strong> – Include file paths & line numbers</li>
+                    <li><strong style="color: #3fb950;">Appropriately scoped</strong> – ~100 lines, single feature</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Slide 11: Good Prompt Examples -->
+        <section class="slide slide-dark">
+            <h2>✅ Good Prompt Examples</h2>
+            <div style="max-width: 1000px;">
+                <div class="prompt-example good">
+                    "Add a function `calculate_average` in `utils/math_operations.py` that takes a list of numbers and returns their average."
+                </div>
+                <div class="prompt-example good">
+                    "Fix the TypeError in `frontend/src/components/UserProfile.tsx` on line 42. The error says we're accessing a property of undefined."
+                </div>
+                <div class="prompt-example good">
+                    "Implement email validation in `RegistrationForm.tsx` to check format before submission."
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 12: Prerequisites -->
+        <section class="slide slide-dark">
+            <h2>📦 Prerequisites</h2>
+            <div class="two-columns">
+                <div class="column">
+                    <h3>For CLI/GUI</h3>
+                    <ul>
+                        <li>Docker installed</li>
+                        <li>LLM API Key (Anthropic, OpenAI, etc.)</li>
+                        <li>OR OpenHands Cloud account</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>For SDK</h3>
+                    <ul>
+                        <li>Python 3.9+</li>
+                        <li>uv package manager</li>
+                        <li>pip install openhands-sdk</li>
+                        <li>pip install openhands-tools</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 13: Hello World Code -->
+        <section class="slide slide-code">
+            <h2>👋 Hello World Agent</h2>
+            <pre><code><span class="keyword">from</span> openhands.sdk <span class="keyword">import</span> LLM, Agent, Conversation, Tool
+<span class="keyword">from</span> openhands.tools.terminal <span class="keyword">import</span> TerminalTool
+<span class="keyword">from</span> openhands.tools.file_editor <span class="keyword">import</span> FileEditorTool
+
+<span class="comment"># Configure LLM</span>
+llm = <span class="function">LLM</span>(
+    model=<span class="string">"anthropic/claude-sonnet-4-5-20250929"</span>,
+    api_key=os.<span class="function">getenv</span>(<span class="string">"LLM_API_KEY"</span>),
+)
+
+<span class="comment"># Create agent with tools</span>
+agent = <span class="function">Agent</span>(llm=llm, tools=[
+    <span class="function">Tool</span>(name=TerminalTool.name),
+    <span class="function">Tool</span>(name=FileEditorTool.name),
+])
+
+<span class="comment"># Run!</span>
+conversation = <span class="function">Conversation</span>(agent=agent, workspace=os.<span class="function">getcwd</span>())
+conversation.<span class="function">send_message</span>(<span class="string">"Write 3 facts about this project to FACTS.txt"</span>)
+conversation.<span class="function">run</span>()</code></pre>
+        </section>
+
+        <!-- Slide 14: Hands-on Preview -->
+        <section class="slide slide-accent">
+            <h2>🧪 Hands-on Exercises</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Exercise 1</h3>
+                    <p>Hello World – Your first agent</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Exercise 2</h3>
+                    <p>Build a TODO app from scratch</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Exercise 3</h3>
+                    <p>Debug with Test-Driven Development</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Exercise 4</h3>
+                    <p>Refactor existing code</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 15: Best Practices -->
+        <section class="slide slide-dark">
+            <h2>💡 Best Practices</h2>
+            <ul>
+                <li><strong style="color: #00d4ff;">Start small</strong> – Begin with simple tasks, iterate</li>
+                <li><strong style="color: #00d4ff;">Be specific</strong> – Include file paths, line numbers, context</li>
+                <li><strong style="color: #00d4ff;">Break down tasks</strong> – One feature per prompt (~100 lines)</li>
+                <li><strong style="color: #00d4ff;">Commit frequently</strong> – Version control after each success</li>
+                <li><strong style="color: #00d4ff;">Include errors</strong> – Share full error messages and logs</li>
+            </ul>
+        </section>
+
+        <!-- Slide 16: Resources -->
+        <section class="slide slide-dark">
+            <h2>📚 Resources</h2>
+            <ul>
+                <li><strong>Docs:</strong> docs.openhands.dev</li>
+                <li><strong>SDK:</strong> github.com/OpenHands/software-agent-sdk</li>
+                <li><strong>Cloud:</strong> app.all-hands.dev (Free $10 credit!)</li>
+                <li><strong>Slack:</strong> openhands.dev/joinslack</li>
+            </ul>
+        </section>
+
+        <!-- Slide 17: Takeaways -->
+        <section class="slide slide-title">
+            <h2>🎯 Key Takeaways</h2>
+            <div class="highlight-box">
+                <ol style="list-style: decimal; padding-left: 30px;">
+                    <li style="margin: 15px 0;"><strong>OpenHands</strong> = AI agents that actually execute code</li>
+                    <li style="margin: 15px 0;"><strong>Good prompts</strong> are concrete, location-specific, and scoped</li>
+                    <li style="margin: 15px 0;"><strong>Agent Engineering</strong> > Vibe Coding</li>
+                    <li style="margin: 15px 0;"><strong>Model-agnostic</strong> = no vendor lock-in</li>
+                    <li style="margin: 15px 0;"><strong>Start small</strong>, iterate, commit frequently</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Slide 18: Q&A -->
+        <section class="slide slide-title">
+            <div class="icon">❓</div>
+            <h1>Questions?</h1>
+            <p class="subtitle">Let's discuss before the hands-on exercises</p>
+        </section>
+
+        <!-- Slide 19: Let's Code -->
+        <section class="slide slide-accent">
+            <div class="icon">💻</div>
+            <h1>Time to Code!</h1>
+            <p class="subtitle">Open the hands-on exercises document</p>
+            <p style="margin-top: 30px; color: #888;">exercises/README.md</p>
+        </section>
+
+    </div>
+
+    <div class="slide-number" id="slideNum">1 / 19</div>
+    <div class="nav-hint">← → to navigate</div>
+
+    <script>
+        let currentSlide = 0;
+        const container = document.getElementById('slides');
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const progress = document.getElementById('progress');
+        const slideNum = document.getElementById('slideNum');
+
+        function updateSlide() {
+            container.style.transform = `translateX(-${currentSlide * 100}vw)`;
+            progress.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+            slideNum.textContent = `${currentSlide + 1} / ${totalSlides}`;
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateSlide();
+                }
+            } else if (e.key === 'ArrowLeft') {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlide();
+                }
+            }
+        });
+
+        // Touch support for mobile
+        let touchStartX = 0;
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > 50) {
+                if (diff > 0 && currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                } else if (diff < 0 && currentSlide > 0) {
+                    currentSlide--;
+                }
+                updateSlide();
+            }
+        });
+    </script>
+</body>
+</html>
