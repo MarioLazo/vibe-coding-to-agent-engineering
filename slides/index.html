@@ -57,6 +57,14 @@
             background: linear-gradient(135deg, #2d1f3d 0%, #1a1a2e 100%);
         }
 
+        .slide-why {
+            background: linear-gradient(135deg, #1a2f1a 0%, #0f1a0f 100%);
+        }
+
+        .slide-timeline {
+            background: linear-gradient(135deg, #2a1a1a 0%, #1a0f0f 100%);
+        }
+
         /* Typography */
         h1 {
             font-size: 3.5rem;
@@ -198,6 +206,99 @@
             color: #aaa;
         }
 
+        /* Why cards */
+        .why-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 25px 35px;
+            border-left: 4px solid #3fb950;
+            text-align: left;
+            max-width: 900px;
+        }
+
+        .why-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #3fb950;
+        }
+
+        .why-card p {
+            font-size: 1.15rem;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .why-card .goal {
+            font-size: 1rem;
+            color: #00d4ff;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        /* Stats highlight */
+        .stats-box {
+            background: rgba(248, 81, 73, 0.1);
+            border: 2px solid #f85149;
+            border-radius: 12px;
+            padding: 20px 30px;
+            margin: 15px 0;
+        }
+
+        .stats-box .stat {
+            font-size: 1.3rem;
+            color: #f85149;
+            margin: 8px 0;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            text-align: left;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .timeline-year {
+            min-width: 100px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00d4ff;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            flex: 1;
+            border-left: 3px solid #00d4ff;
+            margin-left: 20px;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .timeline-content p {
+            font-size: 1rem;
+            color: #aaa;
+        }
+
+        .timeline-item:nth-child(2) .timeline-year { color: #7c3aed; }
+        .timeline-item:nth-child(2) .timeline-content { border-left-color: #7c3aed; }
+        .timeline-item:nth-child(3) .timeline-year { color: #3fb950; }
+        .timeline-item:nth-child(3) .timeline-content { border-left-color: #3fb950; }
+        .timeline-item:nth-child(4) .timeline-year { color: #ffa657; }
+        .timeline-item:nth-child(4) .timeline-content { border-left-color: #ffa657; }
+
         /* Architecture diagram */
         .architecture {
             display: flex;
@@ -241,6 +342,11 @@
         .icon {
             font-size: 4rem;
             margin-bottom: 20px;
+        }
+
+        .icon-small {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
         }
 
         /* Highlight box */
@@ -320,6 +426,22 @@
             font-size: 5rem;
             margin-bottom: 30px;
         }
+
+        /* Reading list */
+        .reading-list {
+            text-align: left;
+            max-width: 800px;
+        }
+
+        .reading-list li {
+            font-size: 1.1rem;
+            margin: 12px 0;
+            color: #aaa;
+        }
+
+        .reading-list li::before {
+            content: "📖";
+        }
     </style>
 </head>
 <body>
@@ -339,16 +461,175 @@
         <section class="slide slide-dark">
             <h2>📋 Today's Agenda</h2>
             <ul>
+                <li><strong style="color: #3fb950;">Begin with WHY</strong> – The case for Agent Engineering</li>
+                <li><strong style="color: #7c3aed;">History</strong> – Evolution of LLM-based coding (2023-2026)</li>
                 <li>What is OpenHands?</li>
                 <li>Vibe Coding vs Agent Engineering</li>
                 <li>Types of Prompts (Good vs Bad)</li>
-                <li>Prerequisites & Setup</li>
                 <li>Hands-on Exercises</li>
-                <li>Best Practices & Takeaways</li>
             </ul>
         </section>
 
-        <!-- Slide 3: What is Vibe Coding -->
+        <!-- Slide 3: Begin with Why - Title -->
+        <section class="slide slide-why">
+            <div class="icon">🤔</div>
+            <h1>Begin with the WHY</h1>
+            <p class="subtitle">Why should we move from Vibe Coding to Agent Engineering?</p>
+        </section>
+
+        <!-- Slide 4: Why #1 - Reliability -->
+        <section class="slide slide-why">
+            <h2>💸 1. The Reliability Why</h2>
+            <p style="text-align: center; font-size: 1.4rem; margin-bottom: 30px;">
+                Mitigating "The Hidden Tax" of Vibe Coding
+            </p>
+            <div class="stats-box">
+                <p class="stat">📈 <strong>1.7x</strong> more major issues</p>
+                <p class="stat">🔀 <strong>75%</strong> more logic errors (flawed control flow)</p>
+                <p class="stat">🔓 <strong>2.74x</strong> higher rate of security vulnerabilities</p>
+                <p style="font-size: 0.9rem; color: #888; margin-top: 15px;">Source: CodeRabbit analysis of AI co-authored code without rigorous discipline</p>
+            </div>
+            <div class="why-card" style="margin-top: 20px;">
+                <div class="goal">🎯 Goal: Turn unreliable agents into reliable systems through testing and oversight</div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Why #2 - Professional -->
+        <section class="slide slide-why">
+            <h2>🎼 2. The Professional Why</h2>
+            <p style="text-align: center; font-size: 1.4rem; margin-bottom: 30px;">
+                Orchestration vs. Consumption
+            </p>
+            <div class="comparison-grid">
+                <div class="comparison-box bad">
+                    <h3>❌ Vibe Coding</h3>
+                    <p style="font-size: 1.2rem;">"Forget that the code even exists and just embrace the vibes"</p>
+                </div>
+                <div class="comparison-box good">
+                    <h3>✅ Agent Engineering</h3>
+                    <p style="font-size: 1.2rem;">Act as oversight for agents that write code</p>
+                </div>
+            </div>
+            <div class="why-card" style="margin-top: 30px;">
+                <div class="goal">🎯 Goal: Move from "prompt consumers" to "agent engineers" who lead a team of digital workers</div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Why #3 - Risk -->
+        <section class="slide slide-why">
+            <h2>⚠️ 3. The Risk Why</h2>
+            <p style="text-align: center; font-size: 1.4rem; margin-bottom: 30px;">
+                Avoiding the "Plausible but Wrong" Trap
+            </p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📋 Business Analysts</h3>
+                    <p>Agents might generate requirements that are "plausible but wrong"</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🏗️ Solution Architects</h3>
+                    <p>Agents may "hallucinate" design patterns that don't fit</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👨‍💻 Developers</h3>
+                    <p>Code that works but introduces subtle bugs or security holes</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🧪 QA Engineers</h3>
+                    <p>Tests that pass but don't actually validate requirements</p>
+                </div>
+            </div>
+            <div class="why-card" style="margin-top: 20px;">
+                <div class="goal">🎯 Goal: Use engineering discipline (Plan, Review, Test, Own) to ensure we don't deploy code we can't explain or verify</div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Why #4 - Scale -->
+        <section class="slide slide-why">
+            <h2>📈 4. The Scale Why</h2>
+            <p style="text-align: center; font-size: 1.4rem; margin-bottom: 30px;">
+                Moving Toward Autonomy (The 4 Modes Framework)
+            </p>
+            <div class="architecture">
+                <div class="arch-layer" style="border-color: #f85149;">
+                    <strong>Mode 4: Designing</strong> – Agent architects solutions
+                </div>
+                <div class="arch-layer" style="border-color: #ffa657;">
+                    <strong>Mode 3: Delegating</strong> – Agent handles features
+                </div>
+                <div class="arch-layer" style="border-color: #7c3aed;">
+                    <strong>Mode 2: Directing</strong> – Agent completes tasks
+                </div>
+                <div class="arch-layer" style="border-color: #3fb950;">
+                    <strong>Mode 1: Doing</strong> – Agent assists with snippets
+                </div>
+            </div>
+            <p style="margin-top: 20px; font-size: 1.1rem; color: #f85149; text-align: center;">
+                ⚠️ Without guardrails, asking an agent to "add docstrings" might refactor your entire codebase
+            </p>
+            <div class="why-card" style="margin-top: 15px;">
+                <div class="goal">🎯 Goal: Establish guardrails and "kill switches" so humans remain in control of ethics and constraints</div>
+            </div>
+        </section>
+
+        <!-- Slide 8: History Title -->
+        <section class="slide slide-timeline">
+            <div class="icon">📜</div>
+            <h1>History of Context-Based LLM Coding</h1>
+            <p class="subtitle">From autocomplete to autonomous agents (2023-2026)</p>
+        </section>
+
+        <!-- Slide 9: Timeline 2023-2024 -->
+        <section class="slide slide-timeline">
+            <h2>📅 The Evolution (2023-2024)</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h4>Context-Unaware Code Snippets</h4>
+                        <p>LLMs as "supercharged autocomplete" • File-level suggestions only<br>
+                        No repository indexing • Human integrates, refactors, tests everything<br>
+                        <em style="color: #666;">Tools: Early GitHub Copilot, Codex</em></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h4>Context-Aware Code Generation</h4>
+                        <p>Models read multiple files • Repository-wide semantic search<br>
+                        Multi-step prompts • RAG for code (API docs, internal libraries)<br>
+                        <em style="color: #666;">Capability: "Write tests for this function"</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10: Timeline 2025-2026 -->
+        <section class="slide slide-timeline">
+            <h2>📅 The Evolution (2025-2026)</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h4>Single Agents for Atomic Coding Tasks</h4>
+                        <p>LLM as a code agent that can <strong>plan and act</strong>, not just reply<br>
+                        Decomposes tasks, calls tools (compilers, linters, test runners)<br>
+                        <em style="color: #666;">Example: "Implement GET /products and validate with curl"</em></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2026</div>
+                    <div class="timeline-content">
+                        <h4>Parallel Agents for Large-Scale Work</h4>
+                        <p>Multi-agent workflows • Repo-scale changes<br>
+                        Concurrent workers with git worktrees • Validation agents<br>
+                        <em style="color: #666;">Example: "Migrate our app from Redux to React Query"</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: What is Vibe Coding -->
         <section class="slide slide-comparison">
             <h2>🎸 What is "Vibe Coding"?</h2>
             <div class="highlight-box">
@@ -365,7 +646,7 @@
             </ul>
         </section>
 
-        <!-- Slide 4: What is Agent Engineering -->
+        <!-- Slide 12: What is Agent Engineering -->
         <section class="slide slide-accent">
             <h2>🔧 What is "Agent Engineering"?</h2>
             <div class="highlight-box">
@@ -382,7 +663,7 @@
             </ul>
         </section>
 
-        <!-- Slide 5: What is OpenHands -->
+        <!-- Slide 13: What is OpenHands -->
         <section class="slide slide-dark">
             <h2>🤝 What is OpenHands?</h2>
             <p style="font-size: 1.4rem; max-width: 900px; text-align: center; margin-bottom: 40px;">
@@ -615,7 +896,7 @@ conversation.<span class="function">run</span>()</code></pre>
             </ul>
         </section>
 
-        <!-- Slide 16: Resources -->
+        <!-- Slide: Resources -->
         <section class="slide slide-dark">
             <h2>📚 Resources</h2>
             <ul>
@@ -626,28 +907,82 @@ conversation.<span class="function">run</span>()</code></pre>
             </ul>
         </section>
 
-        <!-- Slide 17: Takeaways -->
+        <!-- Slide: References - Essential -->
+        <section class="slide slide-dark">
+            <h2>📖 Essential References</h2>
+            <div style="max-width: 900px; text-align: left;">
+                <div class="why-card" style="margin-bottom: 20px; border-left-color: #ffa657;">
+                    <h3 style="color: #ffa657;">🔑 Karpathy: Agentic Engineering (Feb 2026)</h3>
+                    <p style="font-size: 1.1rem;">The primary source. Read the full thread — his retrospective on the past year.</p>
+                    <p style="font-size: 0.9rem; color: #888;">x.com/karpathy/status/2019137879310836075</p>
+                </div>
+                <div class="why-card" style="margin-bottom: 20px; border-left-color: #00d4ff;">
+                    <h3 style="color: #00d4ff;">📘 Osmani: Agentic Engineering</h3>
+                    <p style="font-size: 1.1rem;"><strong>ESSENTIAL.</strong> The most practical articulation of the agentic engineering workflow.</p>
+                    <p style="font-size: 0.9rem; color: #888;">addyosmani.com/blog/agentic-engineering/</p>
+                </div>
+                <div class="why-card" style="border-left-color: #7c3aed;">
+                    <h3 style="color: #7c3aed;">📊 Karpathy: 2025 LLM Year in Review</h3>
+                    <p style="font-size: 1.1rem;">Broader context on how AI crossed the capability threshold for programming.</p>
+                    <p style="font-size: 0.9rem; color: #888;">karpathy.bearblog.dev/year-in-review-2025/</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide: References - Data -->
+        <section class="slide slide-dark">
+            <h2>📊 Data & Research</h2>
+            <div style="max-width: 950px;">
+                <table style="font-size: 1rem;">
+                    <tr>
+                        <th style="width: 35%;">Resource</th>
+                        <th>Key Insights</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Wikipedia: Vibe Coding</strong></td>
+                        <td>Comprehensive history, criticism, and CodeRabbit study data</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Osmani: The 80% Problem</strong></td>
+                        <td>Failure modes: assumption propagation, abstraction bloat, sycophantic agreement</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Osmani: Code Review in AI Age</strong></td>
+                        <td>PRs 18% larger, incidents +24%, change failure rates +30%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>The New Stack: Vibe Coding Is Passé</strong></td>
+                        <td>Good secondary summary for quick reference (Feb 2026)</td>
+                    </tr>
+                </table>
+                <p style="margin-top: 25px; font-size: 1rem; color: #888; text-align: center;">
+                    Full links available in the course repository README
+                </p>
+            </div>
+        </section>
+
+        <!-- Slide: Takeaways -->
         <section class="slide slide-title">
             <h2>🎯 Key Takeaways</h2>
             <div class="highlight-box">
                 <ol style="list-style: decimal; padding-left: 30px;">
-                    <li style="margin: 15px 0;"><strong>OpenHands</strong> = AI agents that actually execute code</li>
-                    <li style="margin: 15px 0;"><strong>Good prompts</strong> are concrete, location-specific, and scoped</li>
-                    <li style="margin: 15px 0;"><strong>Agent Engineering</strong> > Vibe Coding</li>
-                    <li style="margin: 15px 0;"><strong>Model-agnostic</strong> = no vendor lock-in</li>
-                    <li style="margin: 15px 0;"><strong>Start small</strong>, iterate, commit frequently</li>
+                    <li style="margin: 12px 0;"><strong>The WHY:</strong> Reliability, Professionalism, Risk, Scale</li>
+                    <li style="margin: 12px 0;"><strong>Evolution:</strong> Autocomplete (2023) → Agents (2025) → Multi-Agent (2026)</li>
+                    <li style="margin: 12px 0;"><strong>OpenHands</strong> = AI agents that actually execute code</li>
+                    <li style="margin: 12px 0;"><strong>Good prompts</strong> = concrete, location-specific, scoped</li>
+                    <li style="margin: 12px 0;"><strong>Engineering Discipline:</strong> Plan, Review, Test, Own</li>
                 </ol>
             </div>
         </section>
 
-        <!-- Slide 18: Q&A -->
+        <!-- Slide: Q&A -->
         <section class="slide slide-title">
             <div class="icon">❓</div>
             <h1>Questions?</h1>
             <p class="subtitle">Let's discuss before the hands-on exercises</p>
         </section>
 
-        <!-- Slide 19: Let's Code -->
+        <!-- Slide: Let's Code -->
         <section class="slide slide-accent">
             <div class="icon">💻</div>
             <h1>Time to Code!</h1>
@@ -657,7 +992,7 @@ conversation.<span class="function">run</span>()</code></pre>
 
     </div>
 
-    <div class="slide-number" id="slideNum">1 / 19</div>
+    <div class="slide-number" id="slideNum">1 / 27</div>
     <div class="nav-hint">← → to navigate</div>
 
     <script>

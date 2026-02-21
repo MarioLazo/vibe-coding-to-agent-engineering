@@ -11,10 +11,64 @@ This course teaches software engineers how to move from **"vibe coding"** (unstr
 
 ### What You'll Learn
 
+- **The WHY** - Four compelling reasons for agent engineering
+- **History** - Evolution of LLM coding from 2023-2026
 - **What is OpenHands?** - An open-source platform for AI software development agents
 - **Good vs Bad Prompts** - The difference between vague and effective AI prompts
-- **The Three Principles** - Concrete, location-specific, appropriately scoped
 - **Hands-on Skills** - Build, debug, refactor, and automate with AI agents
+
+---
+
+## 🤔 Begin with the WHY
+
+### 1. 💸 The Reliability Why: Mitigating "The Hidden Tax"
+
+Vibe coding comes with a heavy performance cost. Data from CodeRabbit shows that AI co-authored code without rigorous discipline results in:
+
+| Metric | Impact |
+|--------|--------|
+| Major Issues | **1.7x** more |
+| Logic Errors | **75%** more (flawed control flow) |
+| Security Vulnerabilities | **2.74x** higher rate |
+
+> **Goal:** Turn unreliable agents into reliable systems through testing and oversight.
+
+### 2. 🎼 The Professional Why: Orchestration vs. Consumption
+
+The industry is shifting from using AI as simple "autocomplete" to complex task orchestration.
+
+| Vibe Coding | Agent Engineering |
+|-------------|-------------------|
+| "Forget the code exists, embrace the vibes" | Act as oversight for agents that write code |
+| Prompt consumer | Agent engineer leading digital workers |
+
+> **Goal:** Move from "prompt consumers" to "agent engineers" who can lead a team of digital workers.
+
+### 3. ⚠️ The Risk Why: Avoiding the "Plausible but Wrong" Trap
+
+In enterprise environments, agents can take on many roles—each with specific risks:
+
+- **Business Analysts:** May generate requirements that are "plausible but wrong"
+- **Solution Architects:** May "hallucinate" design patterns
+- **Developers:** May write code with subtle bugs or security holes
+- **QA Engineers:** May create tests that pass but don't validate requirements
+
+> **Goal:** Use engineering discipline (Plan, Review, Test, Own) to ensure we don't deploy code we can't explain or verify.
+
+### 4. 📈 The Scale Why: Moving Toward Autonomy
+
+The "4 Modes Framework" shows increasing agent autonomy:
+
+```
+Mode 4: Designing    ← Agent architects solutions (highest risk)
+Mode 3: Delegating   ← Agent handles features
+Mode 2: Directing    ← Agent completes tasks
+Mode 1: Doing        ← Agent assists with snippets (lowest risk)
+```
+
+⚠️ Without guardrails, asking an agent to "add docstrings" might accidentally refactor your entire codebase.
+
+> **Goal:** Establish guardrails and "kill switches" so humans remain in control of ethics and constraints.
 
 ---
 
@@ -160,6 +214,44 @@ examples/01_standalone_sdk/
 ├── 03_activate_microagent.py   # Using skills/context
 └── ...more examples
 ```
+
+---
+
+## 📖 References & Further Reading
+
+### 🔑 Essential Reading (Start Here)
+
+| Resource | Description |
+|----------|-------------|
+| [**Karpathy: Agentic Engineering**](https://x.com/karpathy/status/2019137879310836075) | The primary source. Read the full thread — his retrospective on the past year. (Feb 2026) |
+| [**Osmani: Agentic Engineering**](https://addyosmani.com/blog/agentic-engineering/) | **ESSENTIAL.** The most practical articulation of the agentic engineering workflow. |
+| [**Karpathy: 2025 LLM Year in Review**](https://karpathy.bearblog.dev/year-in-review-2025/) | Broader context on how AI crossed the capability threshold for programming. |
+
+### 📊 Data & Research
+
+| Resource | Key Data |
+|----------|----------|
+| [**Wikipedia: Vibe Coding**](https://en.wikipedia.org/wiki/Vibe_coding) | Comprehensive history, criticism, and the CodeRabbit study data. |
+| [**Osmani: The 80% Problem in Agentic Coding**](https://addyo.substack.com/p/the-80-problem-in-agentic-coding) | Failure modes: assumption propagation, abstraction bloat, sycophantic agreement. |
+| [**Osmani: Code Review in the Age of AI**](https://addyo.substack.com/p/code-review-in-the-age-of-ai) | PRs 18% larger with AI, incidents per PR up 24%, change failure rates up 30%. (Jan 2026) |
+| [**The New Stack: Vibe Coding Is Passé**](https://thenewstack.io/vibe-coding-is-passe/) | Good secondary summary for quick reference. (Feb 2026) |
+
+### 🛠️ OpenHands Resources
+
+| Resource | Link |
+|----------|------|
+| OpenHands Index | https://openhands.dev/blog/openhands-index |
+| OpenHands Documentation | https://docs.openhands.dev |
+| OpenHands SDK | https://docs.openhands.dev/sdk |
+
+### 📅 History of LLM Coding
+
+| Year | Capability | Example Tools |
+|------|------------|---------------|
+| 2023 | Context-unaware snippets | Early Copilot, Codex |
+| 2024 | Context-aware generation | Cursor, Copilot X |
+| 2025 | Single agents for tasks | OpenHands, Devin, Claude Code |
+| 2026 | Parallel multi-agent workflows | Replit Agent 3, Cursor Teams |
 
 ---
 
