@@ -244,6 +244,91 @@ examples/01_standalone_sdk/
 | OpenHands Documentation | https://docs.openhands.dev |
 | OpenHands SDK | https://docs.openhands.dev/sdk |
 
+
+### ⚠️ Warning: Canonical GitHub References (Use these sources)
+
+The transition from "vibe coding" to "agent engineering" moves AI development from ad-hoc, prompt-driven prototyping to structured, production-grade systems with persistent memory, tool-use, and strict governance. Use the canonical repositories below when referencing this evolution.
+
+#### Andrej Karpathy & Vibe Coding Origins
+- [karpathy/LLM_Council](https://github.com/karpathy/LLM_Council) — "99% vibe-coded" project example.
+- [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT) — foundational LLM training mechanics.
+- [karpathy/llama2.c](https://github.com/karpathy/llama2.c) — compact LLM inference reference.
+- [karpathy (org)](https://github.com/karpathy/) — canonical profile for Karpathy projects.
+
+#### Claude Code & Anthropic
+- [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) — tool use and evaluation patterns.
+- [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) — MCP reference implementations.
+- [fiftynotai/igris-ai](https://github.com/fiftynotai/igris-ai) — multi-agent engineering team example.
+
+#### Cursor & Systemized Guardrails
+- [PatrickJS/awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) — curated Cursor rules.
+- [JhonMA82/awesome-clinerules](https://github.com/JhonMA82/awesome-clinerules) — Cline system prompts.
+
+#### GitHub Copilot Agent Ecosystem
+- [github/awesome-copilot](https://github.com/github/awesome-copilot) — Copilot instruction collections.
+- [Code-and-Sorts/awesome-copilot-agents](https://github.com/Code-and-Sorts/awesome-copilot-agents) — curated prompts and skills.
+
+#### Enterprise Agent Frameworks & SRE Example
+- [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) — open-source autonomous agent platform.
+- [rajshah4/openhands-sre](https://github.com/rajshah4/openhands-sre) — example SRE agent implementation.
+- [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) — stateful multi-actor workflows.
+
+### 🔔 Reminder: Keep Content Accurate & Up to Date
+
+- Re-verify all external links at the start of each cohort.
+- Update model names, SDK package names, and minimum Python versions as they evolve.
+- Prefer canonical repositories over forks unless you intentionally teach a forked workflow.
+- Keep OpenHands references pointed at https://github.com/All-Hands-AI/OpenHands.
+
+## 🧪 CI/CD Evaluation for Agent Outputs
+
+Use CI/CD to turn agent output into production-grade artifacts with automated checks.
+
+**Suggested exercises:**
+- Add a workflow that runs tests, linting, and dependency audits on every PR.
+- Create a "model output verification" test suite that asserts required files/sections exist.
+- Add an allowlist of trusted bots (Dependabot) that can auto-merge only when checks pass.
+
+**Key references:**
+- [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) — end-to-end automation of agent workflows.
+- [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) — evaluation and tool-use patterns.
+- [rajshah4/openhands-sre](https://github.com/rajshah4/openhands-sre) — SRE agent example for operational checks.
+
+## 🧭 Architectural Governance & System Prompts
+
+Governance turns agent behavior into consistent, reviewable engineering decisions.
+
+**Suggested exercises:**
+- Draft `.cursorrules` or equivalent system rules that enforce architecture boundaries.
+- Add `.github/copilot-instructions.md` to standardize Copilot agent behavior.
+- Define an MCP policy document that describes allowed tools and data boundaries.
+
+**Key references:**
+- [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) — standardized MCP integrations.
+- [PatrickJS/awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) — curated Cursor rules.
+- [JhonMA82/awesome-clinerules](https://github.com/JhonMA82/awesome-clinerules) — Cline system prompts.
+- [github/awesome-copilot](https://github.com/github/awesome-copilot) — Copilot instruction patterns.
+
+## 📚 Reference Guide (Canonical Repos & Why They Matter)
+
+| Area | Repository | Relevant content summary |
+|------|------------|--------------------------|
+| Vibe Coding Origins | [karpathy/LLM_Council](https://github.com/karpathy/LLM_Council) | "99% vibe-coded" example of delegating large builds to AI. |
+| LLM Foundations | [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT) | LLM training mechanics used by modern coding agents. |
+| LLM Foundations | [karpathy/llama2.c](https://github.com/karpathy/llama2.c) | Minimal inference implementation for understanding model internals. |
+| Claude Tooling | [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) | Tool integration, routing, evaluations. |
+| MCP Architecture | [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | Standardized servers to connect agents to enterprise data. |
+| Multi-Agent Teams | [fiftynotai/igris-ai](https://github.com/fiftynotai/igris-ai) | Persistent memory + multi-agent execution patterns. |
+| Cursor Guardrails | [PatrickJS/awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) | Enforce coding standards and architectural constraints. |
+| Cline Guardrails | [JhonMA82/awesome-clinerules](https://github.com/JhonMA82/awesome-clinerules) | System rules to reduce refactor churn. |
+| Copilot Governance | [github/awesome-copilot](https://github.com/github/awesome-copilot) | Instruction files to standardize Copilot behavior. |
+| Copilot Governance | [Code-and-Sorts/awesome-copilot-agents](https://github.com/Code-and-Sorts/awesome-copilot-agents) | Prompts and skills to constrain autonomy. |
+| Agent Platform | [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) | Open-source, sandboxed autonomous agent platform. |
+| Stateful Workflows | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | Graph-based, multi-actor orchestration. |
+| SRE Agent Example | [rajshah4/openhands-sre](https://github.com/rajshah4/openhands-sre) | Practical SRE agent for incident response workflows. |
+| Karpathy Canon | [karpathy (org)](https://github.com/karpathy/) | Official profile for Karpathy repos. |
+
+
 ### 📅 History of LLM Coding
 
 | Year | Capability | Example Tools |
