@@ -306,8 +306,24 @@ Two things worth knowing before you teach it:
 
 ## 📄 License & attribution
 
-Course material released under the [MIT License](LICENSE). Frameworks, curriculum
-design, and case studies are original work by **[Mario Lazo](https://github.com/MarioLazo)**.
+Two licenses, because prose and code want different instruments:
+
+| | License | Covers |
+|---|---|---|
+| **Content** | **[CC BY 4.0](LICENSE-CONTENT)** | Curriculum, frameworks, philosophy, case studies, deep dives, slides |
+| **Code** | [MIT](LICENSE-CODE) | The Python exercises under `exercises/` |
+
+**Content may be used, adapted, and built on — including commercially — with
+attribution:**
+
+> "From Vibe Coding to Agent Engineering" by Mario Lazo (https://github.com/MarioLazo), licensed under CC BY 4.0.
+
+Frameworks, curriculum design, case studies, and the operating philosophy are
+original work by **[Mario Lazo](https://github.com/MarioLazo)**. Copyright
+retained; the license grants reuse with credit, not ownership.
+
+*Previously MIT throughout. Material published before 2026-08-15 remains
+available under the terms it was released with.*
 
 Built on [OpenHands](https://openhands.dev) by [All Hands AI](https://all-hands.dev).
 Sources and related work credited in **[REFERENCES.md](REFERENCES.md)**.
