@@ -1,162 +1,142 @@
 # 🤖 From Vibe Coding to Agent Engineering
 
-> A hands-on course introducing OpenHands and the transition from unstructured AI prompting to systematic AI-driven development.
+### A practitioner's curriculum for building production-grade AI agents
 
-[![OpenHands](https://img.shields.io/badge/Powered%20by-OpenHands-blue)](https://openhands.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![OpenHands](https://img.shields.io/badge/Built%20on-OpenHands-1F5F5B?style=flat-square)](https://openhands.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Sessions](https://img.shields.io/badge/12%20sessions-15%20weeks-0A66C2?style=flat-square)](curriculum/README.md)
 
-## 📖 Overview
-
-This course teaches software engineers how to move from **"vibe coding"** (unstructured, trial-and-error AI prompting) to **"agent engineering"** (systematic, context-aware development with AI agents).
-
-### What You'll Learn
-
-- **The WHY** - Four compelling reasons for agent engineering
-- **History** - Evolution of LLM coding from 2023-2026
-- **What is OpenHands?** - An open-source platform for AI software development agents
-- **Good vs Bad Prompts** - The difference between vague and effective AI prompts
-- **Hands-on Skills** - Build, debug, refactor, and automate with AI agents
+> ### Would you deploy this agent on a Tuesday at 3pm?
+>
+> That question frames every design decision, every evaluation metric, and every
+> architectural choice in this course.
 
 ---
 
-## 🤔 Begin with the WHY
+## 📖 What this is
 
-### 1. 💸 The Reliability Why: Mitigating "The Hidden Tax"
+A 15-week curriculum that teaches agent engineering the way production systems
+actually get built: **constraints first, not features.**
 
-Vibe coding comes with a heavy performance cost. Data from CodeRabbit shows that AI co-authored code without rigorous discipline results in:
+You will not just write agents that work in demos. You will build agents that
+survive contact with real users, real data, and real failure modes — and you'll
+be able to prove it with numbers rather than a convincing walkthrough.
 
-| Metric | Impact |
-|--------|--------|
-| Major Issues | **1.7x** more |
-| Logic Errors | **75%** more (flawed control flow) |
-| Security Vulnerabilities | **2.74x** higher rate |
+The arc runs from **assisted automation** (agents that do one thing well),
+through **human-in-the-loop collaboration** (agents that decide with oversight),
+to **orchestrated multi-agent systems** (agents that delegate across workflows).
+Production readiness is baked into the deliverables at every stage, not added at
+the end.
 
-> **Goal:** Turn unreliable agents into reliable systems through testing and oversight.
+### 👥 Who this is for
 
-### 2. 🎼 The Professional Why: Orchestration vs. Consumption
+**Practitioners who need to use, evaluate, and govern agents** — developers,
+analysts, architects, engineering leads. You need programming fundamentals
+(Python preferred) and comfort with Git. **You do not need AI/ML background.**
+The agent-specific skills are taught from the ground up.
 
-The industry is shifting from using AI as simple "autocomplete" to complex task orchestration.
+If you want to build the agent *runtime itself* — the loop, the permission model,
+context compaction — see [Building a Coding Agent From Scratch](REFERENCES.md#related-courses),
+which is the technical complement to this course.
 
-| Vibe Coding | Agent Engineering |
-|-------------|-------------------|
-| "Forget the code exists, embrace the vibes" | Act as oversight for agents that write code |
-| Prompt consumer | Agent engineer leading digital workers |
+### 🎓 What you walk away with
 
-> **Goal:** Move from "prompt consumers" to "agent engineers" who can lead a team of digital workers.
-
-### 3. ⚠️ The Risk Why: Avoiding the "Plausible but Wrong" Trap
-
-In enterprise environments, agents can take on many roles—each with specific risks:
-
-- **Business Analysts:** May generate requirements that are "plausible but wrong"
-- **Solution Architects:** May "hallucinate" design patterns
-- **Developers:** May write code with subtle bugs or security holes
-- **QA Engineers:** May create tests that pass but don't validate requirements
-
-> **Goal:** Use engineering discipline (Plan, Review, Test, Own) to ensure we don't deploy code we can't explain or verify.
-
-### 4. 📈 The Scale Why: Moving Toward Autonomy
-
-The "4 Modes Framework" shows increasing agent autonomy:
-
-```
-Mode 4: Designing    ← Agent architects solutions (highest risk)
-Mode 3: Delegating   ← Agent handles features
-Mode 2: Directing    ← Agent completes tasks
-Mode 1: Doing        ← Agent assists with snippets (lowest risk)
-```
-
-⚠️ Without guardrails, asking an agent to "add docstrings" might accidentally refactor your entire codebase.
-
-> **Note on naming:** this course's "4 Modes" ladder describes *escalating autonomy*. It is distinct from the **Four Modes** framework (DOING · DECIDING · DESIGNING · DIRECTING) used in [Agentic CoE](https://github.com/MarioLazo/agentic-coe), which classifies *what kind of work* is handed to a system rather than how much independence it has. Related ideas, different axes — worth keeping straight if you read both.
-
-> **Goal:** Establish guardrails and "kill switches" so humans remain in control of ethics and constraints.
+- **Three portfolio-ready GitHub repositories** demonstrating progressive complexity
+- **A community playbook** with real templates and failure taxonomies
+- **Hands-on experience with OpenHands** for agentic development
+- **A polished Solution Set** — a reusable proposal framework you could put in front of a client
 
 ---
 
-## 🎯 Course Materials
+## 🧭 Start here
 
-### 📊 Presentation Slides
-
-Interactive HTML slides covering all concepts:
-
-```
-slides/index.html
-```
-
-**Topics covered:**
-1. What is "Vibe Coding"?
-2. What is "Agent Engineering"?
-3. Introduction to OpenHands
-4. SDK Architecture
-5. Good vs Bad Prompts
-6. Best Practices
-
-**Navigation:** Use ← → arrow keys or swipe on mobile
-
-### 🧪 Hands-on Exercises
-
-Six progressive exercises (~1.5 hours total):
-
-| Exercise | File | Time | Focus |
-|----------|------|------|-------|
-| 1. Hello World | `exercises/exercise1_hello.py` | 15 min | First agent, basic workflow |
-| 2. Bash Script | `exercises/exercise2_script.py` | 15 min | Good vs bad prompts |
-| 3. TODO App | `exercises/exercise3_todo.py` | 25 min | Greenfield development |
-| 4. Debug with TDD | `exercises/exercise4_debug.py` | 20 min | Test-driven debugging |
-| 5. Refactor Code | `exercises/exercise5_refactor.py` | 15 min | Code improvement |
-| 6. GitHub Action | `exercises/exercise6_ci.py` | 15 min | CI/CD configuration |
+| If you want to… | Go to |
+|---|---|
+| See the full 15-week plan | **[Curriculum](curriculum/README.md)** |
+| Understand the frameworks | **[Frameworks](frameworks/README.md)** |
+| Read what goes wrong in production | **[Case Studies](case-studies/README.md)** |
+| Go deeper on advanced topics | **[Part II modules](#-part-ii--advanced-modules)** |
+| Check a claim | **[References](REFERENCES.md)** |
+| Just start building | **[Exercises](exercises/README.md)** |
 
 ---
 
-## 📗 Part II — Advanced Modules
+## 🤔 Why this course exists
 
-The exercises above cover working *with* an agent. These cover working
-*as an agent engineer* — the material that separates a demo from something
-you'd run on real work.
+Vibe coding — prompting a model, accepting what it generates, moving fast without
+systematic testing — works for prototypes. It fails in production. That isn't an
+opinion; four independent bodies of evidence converge on it:
 
-| Module | Covers | Time |
-|--------|--------|------|
-| **[7 · Microagents & Project Knowledge](docs/07-microagents-and-project-knowledge.md)** | Stop re-explaining your project every prompt. Auto-loading conventions, the three-corrections rule, context budget, cross-tool portability | 25 min |
-| **[8 · Multi-Agent Delegation](docs/08-multi-agent-delegation.md)** | TaskToolSet and sub-agents. When delegation earns its complexity, cascading errors, and why decomposition is the decision that matters | 25 min |
-| **[9 · Evaluating Agent Work](docs/09-evaluating-agent-work.md)** | **The module most courses skip.** Correctness vs. quality vs. meaning, three levels of evaluation effort, reading SWE-bench honestly, building your own benchmark | 30 min |
-| **[10 · Security, Sandboxing & Guardrails](docs/10-security-sandboxing-guardrails.md)** | Agents as privileged identities. What sandboxing does and doesn't buy, least privilege, tool poisoning, testing your kill switch | 25 min |
+| Finding | Source |
+|---|---|
+| +3.4% code quality, **−7.2% delivery stability** | [DORA 2024](https://dora.dev/research/) |
+| Cross-file function calls **down 35%**, refactoring moves **down 70%** (211M lines analyzed) | [GitClear](https://www.gitclear.com/the_ai_code_quality_maintainability_gap) |
+| **1.7×** major issues, **2.74×** security vulnerabilities | CodeRabbit |
+| **32%** cite output quality as the top production blocker | LangChain survey |
 
-> **Why Module 9 matters most.** We teach people to prompt agents and almost never to judge the output. "It ran" is not evaluation — and neither is "the tests passed," when the agent wrote the tests.
+**The pattern is consistent: micro-quality improves, system-level dependability
+degrades.** Individual functions get cleaner. The seams between them get worse.
+And the seams are where production failures live — as every one of the
+[case studies](case-studies/README.md) demonstrates.
 
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Python 3.9+
-- An LLM API key (Anthropic, OpenAI, or [OpenHands Cloud](https://app.all-hands.dev))
-
-### Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/vibe-coding-to-agent-engineering.git
-cd vibe-coding-to-agent-engineering
-
-# Install OpenHands SDK
-pip install openhands-sdk openhands-tools
-
-# Set your API key
-export LLM_API_KEY="your-api-key-here"
-export LLM_MODEL="anthropic/claude-sonnet-4-5-20250929"
-
-# Run your first exercise
-cd exercises
-python exercise1_hello.py
-```
+Full sourcing and methodology notes in **[REFERENCES.md](REFERENCES.md)**.
 
 ---
 
-## 📚 Key Concepts
+## 🎯 The 4 Modes
 
-### ❌ Vibe Coding (Don't Do This)
+The classification tool used throughout. It answers one question: **what is my
+agent actually doing, and who remains accountable?**
+
+| Mode | The agent… | Accountable |
+|---|---|---|
+| **Doing** | Executes a single, well-defined task | The agent, within scope |
+| **Deciding** | Recommends; a human approves | The human who approves |
+| **Delegating** | Coordinates multiple sub-agents | Humans, via oversight and guardrails |
+| **Designing** | — this is always your role | **You, the architect** |
+
+> **Agents gain autonomy; humans gain responsibility.** That asymmetry is
+> intentional. Even at the Delegating level, you remain accountable. Designing
+> never transfers.
+
+The three projects map directly: **Project 1 is Doing · Project 2 is Deciding ·
+Project 3 is Delegating.** You are Designing throughout.
+
+Full framework set — including Observation³, the Production Readiness Checklist,
+and the Evaluation Framework — in **[frameworks/](frameworks/README.md)**.
+
+---
+
+## 🗺️ The 3-project arc
+
+| Project | Sessions | Mode | What you build |
+|---|---|---|---|
+| **1 · Assisted Agent** | 2–4 | Doing | A single agent executing one task within tight guardrails |
+| **2 · Copilot Agent** | 6–8 | Deciding | A human-in-the-loop agent recommending actions for approval |
+| **3 · Multi-Agent System** | 10–12 | Delegating | An orchestrated system of coordinating agents |
+
+15 weeks: 12 taught sessions, 2 open workshop weeks, and Demo Day.
+Full week-by-week map in **[curriculum/](curriculum/README.md)**.
+
+---
+
+## ⚖️ Vibe coding vs. agent engineering
+
+| Dimension | Vibe coding | Agent engineering |
+|---|---|---|
+| **Objective** | Rapid ideation, casual experimentation | Reliable execution of production workloads |
+| **The model is…** | An oracle producing final solutions | A stochastic processor requiring strict instruction sets |
+| **Input** | Unstructured conversational description | Typed interfaces, structured schemas, boundary conditions |
+| **Posture** | Trusting delegation | **Adversarial verification** — assume subtle flaws until proven otherwise |
+| **Constraints** | Frameless | Policy-as-code, validation gates, rate limits |
+
+**The useful mental model:** stop treating the model as an omniscient oracle and
+start treating it as the CPU of a Turing-complete machine. The prompt is the
+instruction set — it manages state, coordinates retrieval, handles I/O, and
+orchestrates control flow. That reframing makes standard software engineering
+rigor obviously applicable, rather than optional.
+
+### ❌ Vibe coding
 
 ```
 "Make the code better"
@@ -164,168 +144,133 @@ python exercise1_hello.py
 "There's a bug somewhere in auth"
 ```
 
-**Problems:** Too vague, no location, not scoped, no context
+Too vague, no location, unscoped, no context.
 
-### ✅ Agent Engineering (Do This)
+### ✅ Agent engineering
 
 ```
-"Add a function `calculate_average` in `utils/math_operations.py` 
-that takes a list of numbers and returns their average."
+Add a function `calculate_average` in `utils/math_operations.py`
+that takes a list of numbers and returns their average.
 
-"Fix the TypeError in `frontend/src/components/UserProfile.tsx` 
-on line 42. The error says we're accessing a property of undefined."
+Fix the TypeError in `frontend/src/components/UserProfile.tsx`
+line 42. The error says we're accessing a property of undefined.
 ```
 
-**The Three Principles:**
-1. **Concrete** – Describe specific functionality
-2. **Location-specific** – Include file paths and line numbers
-3. **Appropriately scoped** – ~100 lines, single feature
+**Three principles:** concrete · location-specific · appropriately scoped
+(~100 lines, single feature).
 
 ---
 
-## 🏗️ OpenHands Architecture
+## 🧪 Hands-on exercises
 
-```
-┌─────────────────────────────────────────┐
-│                  Agent                   │
-│  (Reasoning + Planning + Tool Execution) │
-├─────────────────────────────────────────┤
-│                  Tools                   │
-│  Terminal | FileEditor | Browser | ...   │
-├─────────────────────────────────────────┤
-│               Workspace                  │
-│  Local | Docker | Remote                 │
-├─────────────────────────────────────────┤
-│           LLM (via LiteLLM)              │
-│  Claude | GPT | Qwen | Devstral | ...    │
-└─────────────────────────────────────────┘
-```
+Six progressive exercises, ~1.5 hours total. Start here if you want to build
+before you read.
 
----
+| # | Exercise | Time | Focus |
+|---|---|---|---|
+| 1 | [Hello World](exercises/exercise1_hello.py) | 15 min | First agent, basic workflow |
+| 2 | [Bash Script](exercises/exercise2_script.py) | 15 min | Good vs. bad prompts |
+| 3 | [TODO App](exercises/exercise3_todo.py) | 25 min | Greenfield development |
+| 4 | [Debug with TDD](exercises/exercise4_debug.py) | 20 min | Test-driven debugging |
+| 5 | [Refactor](exercises/exercise5_refactor.py) | 15 min | Code improvement |
+| 6 | [GitHub Action](exercises/exercise6_ci.py) | 15 min | CI/CD configuration |
 
-## 🔗 Resources & Links
-
-### Official OpenHands
-
-| Resource | Link |
-|----------|------|
-| **Documentation** | https://docs.openhands.dev |
-| **SDK Guide** | https://docs.openhands.dev/sdk |
-| **Prompting Best Practices** | https://docs.openhands.dev/openhands/usage/tips/prompting-best-practices |
-| **OpenHands Cloud** | https://app.all-hands.dev (Free $10 credit!) |
-| **Community Slack** | https://openhands.dev/joinslack |
-
-### GitHub Repositories
-
-| Repository | Description |
-|------------|-------------|
-| [OpenHands/software-agent-sdk](https://github.com/OpenHands/software-agent-sdk) | The main SDK with 24+ examples |
-| [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) | Core OpenHands platform |
-| [All-Hands-AI/openhands-resolver](https://github.com/All-Hands-AI/openhands-resolver) | GitHub Issue automation |
-
-### SDK Examples Location
-
-The official SDK repository includes many examples:
-```
-examples/01_standalone_sdk/
-├── 01_hello_world.py           # Basic agent setup
-├── 02_custom_tools.py          # Creating custom tools
-├── 03_activate_microagent.py   # Using skills/context
-└── ...more examples
-```
+Full instructions: **[exercises/README.md](exercises/README.md)** ·
+Slides: **[slides/index.html](slides/index.html)**
 
 ---
 
-## 📖 References & Further Reading
+## 📗 Part II — Advanced modules
 
-### 🔑 Essential Reading (Start Here)
+Working *as an agent engineer* rather than *with* an agent. These separate a demo
+from something you'd run on real work.
 
-| Resource | Description |
-|----------|-------------|
-| [**Karpathy: Agentic Engineering**](https://x.com/karpathy/status/2019137879310836075) | The primary source. Read the full thread — his retrospective on the past year. (Feb 2026) |
-| [**Osmani: Agentic Engineering**](https://addyosmani.com/blog/agentic-engineering/) | **ESSENTIAL.** The most practical articulation of the agentic engineering workflow. |
-| [**Karpathy: 2025 LLM Year in Review**](https://karpathy.bearblog.dev/year-in-review-2025/) | Broader context on how AI crossed the capability threshold for programming. |
+| Module | Covers | Time |
+|---|---|---|
+| **[7 · Microagents & Project Knowledge](docs/07-microagents-and-project-knowledge.md)** | Stop re-explaining your project every prompt. The three-corrections rule, context budget, cross-tool portability | 25 min |
+| **[8 · Multi-Agent Delegation](docs/08-multi-agent-delegation.md)** | TaskToolSet and sub-agents. Cascading errors, and why decomposition is the decision that matters | 25 min |
+| **[9 · Evaluating Agent Work](docs/09-evaluating-agent-work.md)** | **The module most courses skip.** Correctness vs. quality vs. meaning. Reading SWE-bench honestly. Build your own benchmark | 30 min |
+| **[10 · Security, Sandboxing & Guardrails](docs/10-security-sandboxing-guardrails.md)** | Agents as privileged identities. Tool poisoning. Testing your kill switch | 25 min |
 
-### 📊 Data & Research
+> **Why Module 9 matters most.** We teach people to prompt agents and almost never
+> to judge the output. "It ran" is not evaluation — and neither is "the tests
+> passed," when the agent wrote the tests.
 
-| Resource | Key Data |
-|----------|----------|
-| [**Wikipedia: Vibe Coding**](https://en.wikipedia.org/wiki/Vibe_coding) | Comprehensive history, criticism, and the CodeRabbit study data. |
-| [**Osmani: The 80% Problem in Agentic Coding**](https://addyo.substack.com/p/the-80-problem-in-agentic-coding) | Failure modes: assumption propagation, abstraction bloat, sycophantic agreement. |
-| [**Osmani: Code Review in the Age of AI**](https://addyo.substack.com/p/code-review-in-the-age-of-ai) | PRs 18% larger with AI, incidents per PR up 24%, change failure rates up 30%. (Jan 2026) |
-| [**The New Stack: Vibe Coding Is Passé**](https://thenewstack.io/vibe-coding-is-passe/) | Good secondary summary for quick reference. (Feb 2026) |
+---
 
-### 🛠️ OpenHands Resources
+## 🚀 Quick start
 
-| Resource | Link |
-|----------|------|
-| OpenHands Index | https://openhands.dev/blog/openhands-index |
-| OpenHands Documentation | https://docs.openhands.dev |
-| OpenHands SDK | https://docs.openhands.dev/sdk |
+```bash
+git clone https://github.com/MarioLazo/vibe-coding-to-agent-engineering.git
+cd vibe-coding-to-agent-engineering
 
-### 📅 History of LLM Coding
+pip install openhands-sdk openhands-tools
 
-| Year | Capability | Example Tools |
-|------|------------|---------------|
+export LLM_API_KEY="your-api-key-here"
+export LLM_MODEL="anthropic/claude-sonnet-4-5-20250929"
+
+cd exercises && python exercise1_hello.py
+```
+
+**Prerequisites:** Python 3.10+ · Git fundamentals · an LLM API key
+([OpenHands Cloud](https://app.all-hands.dev) includes free credit).
+Full setup checklist in [curriculum/](curriculum/README.md#environment-setup).
+
+---
+
+## 📅 How LLM coding got here
+
+| Year | Capability | Representative tools |
+|---|---|---|
 | 2023 | Context-unaware snippets | Early Copilot, Codex |
 | 2024 | Context-aware generation | Cursor, Copilot X |
 | 2025 | Single agents for tasks | OpenHands, Devin, Claude Code |
 | 2026 | Parallel multi-agent workflows | Replit Agent 3, Cursor Teams, OpenHands TaskToolSet |
 
-**Where OpenHands is as of mid-2026:** multi-agent delegation via `TaskToolSet`, a microagent system that auto-loads project knowledge, native sandboxed execution, model-agnostic routing, built-in security analysis, and inline critic/verification results. On SWE-bench Verified it scores **68.4%** with Claude Opus 4.6 and **46.8%** with Devstral 24B — a ~20-point gap that matters less than it looks, since Devstral runs locally. See [Module 9](docs/09-evaluating-agent-work.md) for how to read those numbers.
-
----
-
-## 💡 Best Practices
-
-1. **Start small** – Begin with simple tasks, iterate
-2. **Be specific** – Include file paths, line numbers, context
-3. **Break down tasks** – One feature per prompt (~100 lines)
-4. **Commit frequently** – Version control after each success
-5. **Include errors** – Share full error messages and logs
-
----
-
-## 📋 For Instructors
-
-### Suggested Class Schedule
-
-| Time | Activity |
-|------|----------|
-| 30 min | Slides presentation |
-| 10 min | Q&A |
-| 60 min | Hands-on exercises |
-| 20 min | Review & discussion |
-
-### Discussion Questions
-
-1. What's the difference between "vibe coding" and "agent engineering"?
-2. Why is specificity important when working with AI agents?
-3. What are the benefits of using an open-source, model-agnostic platform?
-4. How does sandboxed execution (Docker) improve safety?
-5. When should you break a task into smaller prompts?
-
----
-
-## 📄 License
-
-This course material is released under the MIT License.
+**OpenHands, mid-2026:** multi-agent delegation via `TaskToolSet`, microagents
+that auto-load project knowledge, native sandboxed execution, model-agnostic
+routing, built-in security analysis, inline critic results. SWE-bench Verified:
+**68.4%** with Claude Opus 4.6, **46.8%** with Devstral 24B — a gap that matters
+less than it looks, since Devstral runs locally. [Module 9](docs/09-evaluating-agent-work.md)
+covers how to read those numbers.
 
 ---
 
 ## 🏛️ Taking this into an organization
 
-This course is about individual practice. Rolling agent engineering out across a team or enterprise is a different problem — operating model, risk tiers, quality gates, and who signs off on what.
+This course is about individual and team practice. Rolling agent engineering out
+across an enterprise is a different problem — operating model, risk tiers,
+quality gates, and who signs off on what.
 
-That's covered in **[Agentic CoE](https://github.com/MarioLazo/agentic-coe)**: the Agent Card documentation standard, a ten-gate Pre-Flight Checklist, the BXT scorecard for use-case selection, catalogs for MCP servers and agent skills organized by governance requirement, and an 11,000-word reference for regulated industries.
-
----
-
-## 🙏 Acknowledgments
-
-- [OpenHands](https://openhands.dev) - The open-source AI coding agent platform
-- [All Hands AI](https://all-hands.dev) - The team behind OpenHands
+That's **[Agentic CoE](https://github.com/MarioLazo/agentic-coe)**: the Agent Card
+documentation standard, a ten-gate Pre-Flight Checklist, the BXT scorecard for
+use-case selection, governance-organized catalogs for MCP servers and agent
+skills, and an 11,000-word reference for regulated industries.
 
 ---
 
-*Made with 🤖 by AI agents, for teaching about AI agents*
+## 📋 For instructors
+
+Session-by-session teaching notes, agendas, assessment weightings, student role
+definitions, and the Solution Set specification are all in
+**[curriculum/](curriculum/README.md)**.
+
+Two things worth knowing before you teach it:
+
+- **Grade demos on honesty, not perfection.** A student who shows a failure and
+  explains what they learned is demonstrating more engineering maturity than one
+  who hides limitations. This shapes the whole culture of the course.
+- **The pre-mortem is the highest-leverage exercise.** Push relentlessly for
+  specificity. "The agent might fail" is useless; "the agent will hallucinate
+  function signatures on files with no type hints, detectable by comparing output
+  to AST parsing" is actionable.
+
+---
+
+## 📄 License & attribution
+
+Course material released under the [MIT License](LICENSE). Frameworks, curriculum
+design, and case studies are original work by **[Mario Lazo](https://github.com/MarioLazo)**.
+
+Built on [OpenHands](https://openhands.dev) by [All Hands AI](https://all-hands.dev).
+Sources and related work credited in **[REFERENCES.md](REFERENCES.md)**.
