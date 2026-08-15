@@ -68,6 +68,8 @@ Mode 1: Doing        ← Agent assists with snippets (lowest risk)
 
 ⚠️ Without guardrails, asking an agent to "add docstrings" might accidentally refactor your entire codebase.
 
+> **Note on naming:** this course's "4 Modes" ladder describes *escalating autonomy*. It is distinct from the **Four Modes** framework (DOING · DECIDING · DESIGNING · DIRECTING) used in [Agentic CoE](https://github.com/MarioLazo/agentic-coe), which classifies *what kind of work* is handed to a system rather than how much independence it has. Related ideas, different axes — worth keeping straight if you read both.
+
 > **Goal:** Establish guardrails and "kill switches" so humans remain in control of ethics and constraints.
 
 ---
@@ -104,6 +106,23 @@ Six progressive exercises (~1.5 hours total):
 | 4. Debug with TDD | `exercises/exercise4_debug.py` | 20 min | Test-driven debugging |
 | 5. Refactor Code | `exercises/exercise5_refactor.py` | 15 min | Code improvement |
 | 6. GitHub Action | `exercises/exercise6_ci.py` | 15 min | CI/CD configuration |
+
+---
+
+## 📗 Part II — Advanced Modules
+
+The exercises above cover working *with* an agent. These cover working
+*as an agent engineer* — the material that separates a demo from something
+you'd run on real work.
+
+| Module | Covers | Time |
+|--------|--------|------|
+| **[7 · Microagents & Project Knowledge](docs/07-microagents-and-project-knowledge.md)** | Stop re-explaining your project every prompt. Auto-loading conventions, the three-corrections rule, context budget, cross-tool portability | 25 min |
+| **[8 · Multi-Agent Delegation](docs/08-multi-agent-delegation.md)** | TaskToolSet and sub-agents. When delegation earns its complexity, cascading errors, and why decomposition is the decision that matters | 25 min |
+| **[9 · Evaluating Agent Work](docs/09-evaluating-agent-work.md)** | **The module most courses skip.** Correctness vs. quality vs. meaning, three levels of evaluation effort, reading SWE-bench honestly, building your own benchmark | 30 min |
+| **[10 · Security, Sandboxing & Guardrails](docs/10-security-sandboxing-guardrails.md)** | Agents as privileged identities. What sandboxing does and doesn't buy, least privilege, tool poisoning, testing your kill switch | 25 min |
+
+> **Why Module 9 matters most.** We teach people to prompt agents and almost never to judge the output. "It ran" is not evaluation — and neither is "the tests passed," when the agent wrote the tests.
 
 ---
 
@@ -251,7 +270,9 @@ examples/01_standalone_sdk/
 | 2023 | Context-unaware snippets | Early Copilot, Codex |
 | 2024 | Context-aware generation | Cursor, Copilot X |
 | 2025 | Single agents for tasks | OpenHands, Devin, Claude Code |
-| 2026 | Parallel multi-agent workflows | Replit Agent 3, Cursor Teams |
+| 2026 | Parallel multi-agent workflows | Replit Agent 3, Cursor Teams, OpenHands TaskToolSet |
+
+**Where OpenHands is as of mid-2026:** multi-agent delegation via `TaskToolSet`, a microagent system that auto-loads project knowledge, native sandboxed execution, model-agnostic routing, built-in security analysis, and inline critic/verification results. On SWE-bench Verified it scores **68.4%** with Claude Opus 4.6 and **46.8%** with Devstral 24B — a ~20-point gap that matters less than it looks, since Devstral runs locally. See [Module 9](docs/09-evaluating-agent-work.md) for how to read those numbers.
 
 ---
 
@@ -289,6 +310,14 @@ examples/01_standalone_sdk/
 ## 📄 License
 
 This course material is released under the MIT License.
+
+---
+
+## 🏛️ Taking this into an organization
+
+This course is about individual practice. Rolling agent engineering out across a team or enterprise is a different problem — operating model, risk tiers, quality gates, and who signs off on what.
+
+That's covered in **[Agentic CoE](https://github.com/MarioLazo/agentic-coe)**: the Agent Card documentation standard, a ten-gate Pre-Flight Checklist, the BXT scorecard for use-case selection, catalogs for MCP servers and agent skills organized by governance requirement, and an 11,000-word reference for regulated industries.
 
 ---
 
