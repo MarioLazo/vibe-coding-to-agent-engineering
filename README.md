@@ -310,7 +310,7 @@ Two licenses, because prose and code want different instruments:
 
 | | License | Covers |
 |---|---|---|
-| **Content** | **[CC BY 4.0](LICENSE-CONTENT)** | Curriculum, frameworks, philosophy, case studies, deep dives, slides |
+| **Content** | **[CC BY 4.0](LICENSE-CONTENT)** ([summary](NOTICE.md)) | Curriculum, frameworks, philosophy, case studies, deep dives, slides |
 | **Code** | [MIT](LICENSE-CODE) | The Python exercises under `exercises/` |
 
 **Content may be used, adapted, and built on — including commercially — with
