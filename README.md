@@ -191,6 +191,8 @@ from something you'd run on real work.
 | **[8 · Multi-Agent Delegation](docs/08-multi-agent-delegation.md)** | TaskToolSet and sub-agents. Cascading errors, and why decomposition is the decision that matters | 25 min |
 | **[9 · Evaluating Agent Work](docs/09-evaluating-agent-work.md)** | **The module most courses skip.** Correctness vs. quality vs. meaning. Reading SWE-bench honestly. Build your own benchmark | 30 min |
 | **[10 · Security, Sandboxing & Guardrails](docs/10-security-sandboxing-guardrails.md)** | Agents as privileged identities. Tool poisoning. Testing your kill switch | 25 min |
+| **[11 · Context Engineering](docs/11-context-engineering.md)** | What happens when the window fills. Three tiers of compaction, window-relative triggers, and why silent degradation is the failure that hides | 25 min |
+| **[12 · Decision Records](docs/12-decision-records.md)** | Capturing *why*, including reversals. And the idea that generalizes furthest: a boundary the agent has to cooperate with is not a boundary | 20 min |
 
 > **Why Module 9 matters most.** We teach people to prompt agents and almost never
 > to judge the output. "It ran" is not evaluation — and neither is "the tests

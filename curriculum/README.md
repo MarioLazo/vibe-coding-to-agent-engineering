@@ -87,6 +87,13 @@ before you write a line of code.
 Architecture doc covers five questions: what task, what inputs and outputs, what
 boundaries, what success criteria, how will you observe it.
 
+**Start a decision record set in the same session.** The architecture doc says
+what the system is; the ADR says why you chose it over the alternative you
+actually considered. Model choice, autonomy level, and what the agent may touch
+are all worth a record from day one — and by Session 5 most students have their
+first *reversal* to write, which is the more valuable document. See
+[Module 12](../docs/12-decision-records.md).
+
 *Reference:* [IAM Modernization](../case-studies/README.md#1--iam-modernization) —
 what skipping the pre-mortem costs.
 
@@ -143,6 +150,11 @@ mechanisms (sequential, parallel, hierarchical), distributed observability, and
 cost modelling of orchestrated vs. monolithic approaches.
 
 Every student should leave with a decomposition plan critiqued by a partner.
+
+**Also covered here: context budgets across agents.** Orchestration multiplies
+context consumption — every sub-agent carries its own instructions and history.
+Plan compaction and per-agent budgets at design time, not after the first
+window-overflow. See [Module 11](../docs/11-context-engineering.md).
 
 ### Sessions 10–12 — The Orchestration Arc
 

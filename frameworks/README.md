@@ -65,11 +65,18 @@ Treat it as a minimum bar, not a ceiling.
 | **Security** | Input sanitization; no secrets in prompts | Approval gate auth + audit trail | Agent-to-agent auth + least privilege + dependency scanning |
 | **Testing** | Unit tests for core functions | Integration tests incl. simulated human approval | End-to-end orchestration tests + chaos testing |
 | **Documentation** | README with scope **and limitations** | Decision log for approval/rejection rationale | Governance docs: escalation policy, kill switches, compliance |
+| **Decision records** | ADRs for model choice, autonomy level, and what the agent may touch | + records for approval-gate design and rejection handling | + records for orchestration topology and inter-agent trust. **Reversals recorded, not deleted** |
+| **Context** | Know token usage per task and your window size | Compaction strategy defined, triggered on window *fraction* not a fixed number | Compaction persisted and replay-safe; per-agent context budgets |
+| **Durability** | Runs complete or fail visibly — no silent partial state | Interrupted workflows recover to a known state | Runs are resumable and replayable; replay reconstructs the same state |
 
-Two rows people skip and regret: **cost tracking at Tier 2** (human review time
-is the cost that kills ROI, and nobody measures it) and **"and limitations" in
-the Tier 1 README** (an agent whose boundaries aren't written down will be used
-outside them).
+Rows people skip and regret:
+
+- **Cost tracking at Tier 2** — human review time is the cost that kills ROI, and nobody measures it.
+- **"And limitations" in the Tier 1 README** — an agent whose boundaries aren't written down will be used outside them.
+- **Context at Tier 1** — running out of window is a design decision you make by default if you don't make it deliberately. See [Module 11](../docs/11-context-engineering.md).
+- **Durability at Tier 2** — the first time a multi-step workflow is interrupted mid-run, you find out whether you designed for it. Usually you didn't.
+
+**One test that applies to every Security row:** is this control *enforced*, or does it depend on the agent cooperating? A boundary the agent has to honour voluntarily is a convention, not a boundary — see [Module 12](../docs/12-decision-records.md#cooperative-vs-enforced--the-idea-to-steal).
 
 ---
 
