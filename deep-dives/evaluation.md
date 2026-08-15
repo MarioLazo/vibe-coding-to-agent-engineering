@@ -1,6 +1,8 @@
-# Module 9 — Evaluating Agent Work
+# Evaluating Agent Work — Evaluating Agent Work
 
 > **The module most agent courses skip.** We spend enormous effort teaching people to prompt agents and almost none teaching them to tell whether the output was any good. That gap is where production failures come from.
+
+**Supports Sessions 4, 8, 12** — every evaluation checkpoint in the course
 
 **Time:** 30 minutes · **Prerequisites:** Modules 1–6
 
@@ -14,7 +16,7 @@ You gave the agent a task. It produced code. The code runs. Tests pass.
 
 Most engineers answer this by reading the diff and forming an impression. That works at ten lines and fails completely at scale — which is the entire point of agent engineering. If your quality signal is "I read it and it seemed fine," you have not moved past vibe coding. You have automated the writing and kept the vibes.
 
-The uncomfortable data from Module 1: AI co-authored code without rigorous discipline shows **1.7× more major issues, 75% more logic errors, and a 2.74× higher rate of security vulnerabilities.** Those defects were all reviewed by someone who thought the code seemed fine.
+The uncomfortable data from the [evidence base](../REFERENCES.md): AI co-authored code without rigorous discipline shows **1.7× more major issues, 75% more logic errors, and a 2.74× higher rate of security vulnerabilities.** Those defects were all reviewed by someone who thought the code seemed fine.
 
 ---
 
@@ -149,6 +151,6 @@ You now have something almost nobody has: a repeatable measure of whether your a
 
 ---
 
-**Next:** [Module 10 — Security, Sandboxing, and Guardrails](10-security-sandboxing-guardrails.md)
+**Next:** [Security, Sandboxing & Guardrails — Security, Sandboxing, and Guardrails](security.md)
 
 *Part of [From Vibe Coding to Agent Engineering](../README.md). The governance side of this material is developed further in [Agentic CoE](https://github.com/MarioLazo/agentic-coe).*

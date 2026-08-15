@@ -202,7 +202,7 @@ Most agent projects build the agent and skip all three. Then they discover that
 five agents with five private interpretations of the domain don't compose.
 
 **Where it applies:** Session 9 orchestration design, and
-[Module 7](../docs/07-microagents-and-project-knowledge.md).
+[Microagents & Project Knowledge](../deep-dives/microagents.md).
 
 ---
 

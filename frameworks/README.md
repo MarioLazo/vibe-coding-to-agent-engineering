@@ -73,10 +73,10 @@ Rows people skip and regret:
 
 - **Cost tracking at Tier 2** — human review time is the cost that kills ROI, and nobody measures it.
 - **"And limitations" in the Tier 1 README** — an agent whose boundaries aren't written down will be used outside them.
-- **Context at Tier 1** — running out of window is a design decision you make by default if you don't make it deliberately. See [Module 11](../docs/11-context-engineering.md).
+- **Context at Tier 1** — running out of window is a design decision you make by default if you don't make it deliberately. See [Context Engineering](../deep-dives/context-engineering.md).
 - **Durability at Tier 2** — the first time a multi-step workflow is interrupted mid-run, you find out whether you designed for it. Usually you didn't.
 
-**One test that applies to every Security row:** is this control *enforced*, or does it depend on the agent cooperating? A boundary the agent has to honour voluntarily is a convention, not a boundary — see [Module 12](../docs/12-decision-records.md#cooperative-vs-enforced--the-idea-to-steal).
+**One test that applies to every Security row:** is this control *enforced*, or does it depend on the agent cooperating? A boundary the agent has to honour voluntarily is a convention, not a boundary — see [Decision Records](../deep-dives/decision-records.md#cooperative-vs-enforced--the-idea-to-steal).
 
 ---
 

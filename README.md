@@ -50,17 +50,37 @@ which is the technical complement to this course.
 
 ## 🧭 Start here
 
-| If you want to… | Go to |
-|---|---|
-| Understand how I actually work | **[Operating Philosophy](curriculum/philosophy.md)** |
-| See the full 15-week plan | **[Curriculum](curriculum/README.md)** |
-| Understand the frameworks | **[Frameworks](frameworks/README.md)** |
-| Read what goes wrong in production | **[Case Studies](case-studies/README.md)** |
-| Go deeper on advanced topics | **[Part II modules](#-part-ii--advanced-modules)** |
-| Check a claim | **[References](REFERENCES.md)** |
-| Just start building | **[Exercises](exercises/README.md)** |
+Pick the path that matches why you're here.
 
----
+<table>
+<tr><td width="33%" valign="top">
+
+**🎓 Taking the course**
+
+1. [Operating Philosophy](curriculum/philosophy.md) — why it's built this way
+2. [OpenHands Primer](curriculum/openhands-primer.md) — what the platform is
+3. [Curriculum](curriculum/README.md) — the 15-week plan
+4. [Exercises](exercises/README.md) — start building
+
+</td><td width="33%" valign="top">
+
+**👨‍🏫 Teaching it**
+
+1. [Curriculum](curriculum/README.md) — agendas, teaching notes, assessment
+2. [Operating Philosophy](curriculum/philosophy.md) — the *why* behind each session
+3. [Case Studies](case-studies/README.md) — mapped to the session each supports
+4. [Slides](slides/index.html)
+
+</td><td width="33%" valign="top">
+
+**🔧 Just here for the material**
+
+1. [Frameworks](frameworks/README.md) — the four tools
+2. [Deep Dives](#-deep-dives) — six standalone topics
+3. [Case Studies](case-studies/README.md) — five production failures
+4. [References](REFERENCES.md) — the evidence base
+
+</td></tr></table>
 
 ## 💭 The philosophy underneath
 
@@ -194,23 +214,24 @@ Slides: **[slides/index.html](slides/index.html)**
 
 ---
 
-## 📗 Part II — Advanced modules
+## 📚 Deep dives
 
-Working *as an agent engineer* rather than *with* an agent. These separate a demo
-from something you'd run on real work.
+Six standalone topics that go past what a three-hour session covers. Each names
+the sessions it supports — read them when you get there, or on their own.
 
-| Module | Covers | Time |
+| Topic | Supports | Covers |
 |---|---|---|
-| **[7 · Microagents & Project Knowledge](docs/07-microagents-and-project-knowledge.md)** | Stop re-explaining your project every prompt. The three-corrections rule, context budget, cross-tool portability | 25 min |
-| **[8 · Multi-Agent Delegation](docs/08-multi-agent-delegation.md)** | TaskToolSet and sub-agents. Cascading errors, and why decomposition is the decision that matters | 25 min |
-| **[9 · Evaluating Agent Work](docs/09-evaluating-agent-work.md)** | **The module most courses skip.** Correctness vs. quality vs. meaning. Reading SWE-bench honestly. Build your own benchmark | 30 min |
-| **[10 · Security, Sandboxing & Guardrails](docs/10-security-sandboxing-guardrails.md)** | Agents as privileged identities. Tool poisoning. Testing your kill switch | 25 min |
-| **[11 · Context Engineering](docs/11-context-engineering.md)** | What happens when the window fills. Three tiers of compaction, window-relative triggers, and why silent degradation is the failure that hides | 25 min |
-| **[12 · Decision Records](docs/12-decision-records.md)** | Capturing *why*, including reversals. And the idea that generalizes furthest: a boundary the agent has to cooperate with is not a boundary | 20 min |
+| **[Evaluating Agent Work](deep-dives/evaluation.md)** | Sessions 4, 8, 12 | Correctness vs. quality vs. meaning as separate failures. Reading SWE-bench honestly. Building your own benchmark |
+| **[Microagents & Project Knowledge](deep-dives/microagents.md)** | Sessions 3, 7 | Stop re-explaining your project every prompt. The three-corrections rule, context budget, portability |
+| **[Multi-Agent Delegation](deep-dives/delegation.md)** | Sessions 9–11 | Cascading errors, and why decomposition — not implementation — is the decision that matters |
+| **[Context Engineering](deep-dives/context-engineering.md)** | Sessions 9–10 | What happens when the window fills. Three-tier compaction, window-relative triggers, silent degradation |
+| **[Security & Guardrails](deep-dives/security.md)** | Sessions 6, 11 | Agents as privileged identities. Tool poisoning. Testing your kill switch |
+| **[Decision Records](deep-dives/decision-records.md)** | Sessions 2, 5 | Capturing *why*, including reversals. A boundary the agent must cooperate with is not a boundary |
 
-> **Why Module 9 matters most.** We teach people to prompt agents and almost never
-> to judge the output. "It ran" is not evaluation — and neither is "the tests
-> passed," when the agent wrote the tests.
+> **If you read one, read [Evaluating Agent Work](deep-dives/evaluation.md).** We
+> teach people to prompt agents and almost never to judge the output. "It ran" is
+> not evaluation — and neither is "the tests passed," when the agent wrote the
+> tests.
 
 ---
 
@@ -247,7 +268,7 @@ Full setup checklist in [curriculum/](curriculum/README.md#environment-setup).
 that auto-load project knowledge, native sandboxed execution, model-agnostic
 routing, built-in security analysis, inline critic results. SWE-bench Verified:
 **68.4%** with Claude Opus 4.6, **46.8%** with Devstral 24B — a gap that matters
-less than it looks, since Devstral runs locally. [Module 9](docs/09-evaluating-agent-work.md)
+less than it looks, since Devstral runs locally. [Evaluating Agent Work](deep-dives/evaluation.md)
 covers how to read those numbers.
 
 ---

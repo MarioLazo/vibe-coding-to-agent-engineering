@@ -1,8 +1,10 @@
-# Module 8 — Multi-Agent Delegation
+# Multi-Agent Delegation — Multi-Agent Delegation
 
 > Where agent engineering starts to look like engineering management — and inherits the same failure modes.
 
-**Time:** 25 minutes · **Prerequisites:** Module 7
+**Supports Sessions 9–11** — orchestration design, build, and hardening
+
+**Time:** 25 minutes · **Prerequisites:** Microagents & Project Knowledge
 
 ---
 
@@ -117,6 +119,6 @@ If you're delegating, your controls need to be about the *process*, not the arti
 
 ---
 
-**Next:** [Module 9 — Evaluating Agent Work](09-evaluating-agent-work.md)
+**Next:** [Evaluating Agent Work — Evaluating Agent Work](evaluation.md)
 
 *Part of [From Vibe Coding to Agent Engineering](../README.md). Autonomy levels and their governance requirements are developed in [Agentic CoE](https://github.com/MarioLazo/agentic-coe).*

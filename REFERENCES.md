@@ -72,7 +72,7 @@ results.
 
 **SWE-bench Verified:** 68.4% with Claude Opus 4.6, ~52% with Qwen3-235B-A22B,
 46.8% with Devstral 24B. See
-[Module 9](docs/09-evaluating-agent-work.md) for how to read those numbers —
+[Evaluating Agent Work](deep-dives/evaluation.md) for how to read those numbers —
 and how not to.
 
 ---

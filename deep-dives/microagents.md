@@ -1,6 +1,8 @@
-# Module 7 — Microagents and Project Knowledge
+# Microagents & Project Knowledge — Microagents and Project Knowledge
 
 > The single highest-leverage change most teams can make: stop re-explaining your project in every prompt.
+
+**Supports Sessions 3 and 7** — prompt engineering and multi-step workflows
 
 **Time:** 25 minutes · **Prerequisites:** Modules 1–6
 
@@ -8,7 +10,7 @@
 
 ## The problem you've already hit
 
-By Module 6 you've written prompts like:
+By the sixth exercise you've written prompts like:
 
 > "Add a function to `utils/math_operations.py`. Use pytest, not unittest. Follow the existing error-handling pattern. Don't add dependencies without asking."
 
@@ -118,6 +120,6 @@ Because microagents are markdown, the same content adapts across tools:
 
 ---
 
-**Next:** [Module 8 — Multi-Agent Delegation](08-multi-agent-delegation.md)
+**Next:** [Multi-Agent Delegation — Multi-Agent Delegation](delegation.md)
 
 *Part of [From Vibe Coding to Agent Engineering](../README.md). Cross-tool skill selection and evaluation is covered in the [Skills Catalog](https://github.com/MarioLazo/agentic-coe/blob/main/tools/skills-catalog.md).*

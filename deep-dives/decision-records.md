@@ -1,6 +1,8 @@
-# Module 12 — Decision Records
+# Decision Records — Decision Records
 
 > The pre-mortem predicts what will go wrong. The decision record captures what you chose and why — including the choices you later reverse. Together they close the loop.
+
+**Supports Sessions 2 and 5** — design decisions and the mid-course reversal
 
 **Time:** 20 minutes · **Prerequisites:** Sessions 2 and 4
 
@@ -133,7 +135,7 @@ stakeholder as though they were. Ask of each one: *what happens if the agent
 simply doesn't cooperate?* If the answer is "nothing stops it," you have a
 convention.
 
-This is [Module 10](10-security-sandboxing-guardrails.md)'s least-privilege
+This is [Security, Sandboxing & Guardrails](security.md)'s least-privilege
 principle arriving from the other direction: the permission you never granted is
 the only one that can't be ignored.
 

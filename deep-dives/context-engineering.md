@@ -1,8 +1,10 @@
-# Module 11 — Context Engineering
+# Context Engineering — Context Engineering
 
 > Every agent you build will eventually run out of room. What happens then is a design decision, and most people never make it — they just find out.
 
-**Time:** 25 minutes · **Prerequisites:** Module 7
+**Supports Sessions 9–10** — orchestration, where context multiplies across agents
+
+**Time:** 25 minutes · **Prerequisites:** Microagents & Project Knowledge
 
 ---
 
@@ -36,7 +38,7 @@ At any moment your window is being spent on:
 | **History** | The conversation so far, including tool calls and their output | Session length |
 | **Working set** | The files, data, and results currently in play | Task complexity |
 
-Instructions are the part you control directly ([Module 7](07-microagents-and-project-knowledge.md)).
+Instructions are the part you control directly ([Microagents & Project Knowledge](microagents.md)).
 History is the part that grows without anyone deciding it should. **Tool output is
 usually the largest and least examined component** — a single directory listing or
 test run can consume more than the entire system prompt.
@@ -173,6 +175,6 @@ almost nobody runs it.
 
 ---
 
-**Next:** [Module 12 — Decision Records](12-decision-records.md)
+**Next:** [Decision Records — Decision Records](decision-records.md)
 
 *Part of [From Vibe Coding to Agent Engineering](../README.md).*

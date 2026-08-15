@@ -1,6 +1,8 @@
-# Module 10 — Security, Sandboxing, and Guardrails
+# Security, Sandboxing & Guardrails — Security, Sandboxing, and Guardrails
 
 > An agent with tools is a privileged identity. Most of the security thinking in this space still treats it like a feature.
+
+**Supports Sessions 6 and 11** — approval gates and hardening
 
 **Time:** 25 minutes · **Prerequisites:** Modules 1–9
 
@@ -88,7 +90,7 @@ The single most common failure in real deployments, stated plainly:
 
 > **Teams run high-autonomy workflows with low-autonomy governance.**
 
-They approve individual outputs while the system makes structural decisions nobody reviews. Delegation (Module 8) is where this usually bites — the parent agent's decomposition is the consequential decision, and it's the one nobody looks at.
+They approve individual outputs while the system makes structural decisions nobody reviews. Delegation (Multi-Agent Delegation) is where this usually bites — the parent agent's decomposition is the consequential decision, and it's the one nobody looks at.
 
 The check: **what level is this agent actually operating at, and does my governance match that level?** If the agent is orchestrating other agents and your control is "I read the final diff," those don't match.
 

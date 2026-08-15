@@ -63,6 +63,10 @@ instructor materials.
 
 ### Session 1 — Kickoff & Foundations
 
+Companion material: **[OpenHands Primer](openhands-primer.md)** — what the
+platform is, how the SDK is structured, and the good-vs-bad prompt contrast.
+Assign as pre-reading or work through it live during setup.
+
 Establishes the **dev shop mental model**: engineering manager, solution
 architect, onshore/offshore developers, business analysts, QA, trainers, support,
 project manager. Understanding where you sit matters, because the agents you build
@@ -97,7 +101,7 @@ what the system is; the ADR says why you chose it over the alternative you
 actually considered. Model choice, autonomy level, and what the agent may touch
 are all worth a record from day one — and by Session 5 most students have their
 first *reversal* to write, which is the more valuable document. See
-[Module 12](../docs/12-decision-records.md).
+[Decision Records](../deep-dives/decision-records.md).
 
 Cover **black swans and typical events** both. You won't predict the black swan
 correctly — that isn't the point. Asking the question provokes the recall:
@@ -164,7 +168,7 @@ Every student should leave with a decomposition plan critiqued by a partner.
 **Also covered here: context budgets across agents.** Orchestration multiplies
 context consumption — every sub-agent carries its own instructions and history.
 Plan compaction and per-agent budgets at design time, not after the first
-window-overflow. See [Module 11](../docs/11-context-engineering.md).
+window-overflow. See [Context Engineering](../deep-dives/context-engineering.md).
 
 ### Sessions 10–12 — The Orchestration Arc
 
