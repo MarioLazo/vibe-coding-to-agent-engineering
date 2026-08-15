@@ -77,6 +77,37 @@ and how not to.
 
 ---
 
+## Books
+
+### Process Over Magic: Beyond Vibe Coding
+
+**Uberto Barbini** · *Faster, Smarter, and Safer Coding with AI Assistants*
+The Pragmatic Bookshelf · ISBN 979-8-88865-200-8
+
+The closest book-length treatment of this course's central argument, and the
+most directly useful companion reading. It arrives at the same conclusion from
+a different direction: that the answer to unreliable AI-assisted development is
+**process**, not better prompting or a better model.
+
+Worth reading alongside these sessions in particular:
+
+| Chapter | Maps to |
+|---|---|
+| **1 · Going with the Vibe** — vibe coding a game, what went wrong, using specifications to drive assistants | Sessions 1–3. The "what went wrong" section is the same demo-to-production gap this course opens with, worked through concretely |
+| **2 · Building Securely and Predictably** — *Keep the Edge*, *One Prompt, One Commit*, building to rules | Session 3. **"One Prompt, One Commit" is the same discipline as this course's prompt-versioning-in-Git habit**, argued more fully than we have room for |
+| **3 · Learning by Coding** — inception, shaping the idea, walking skeleton, modeling the domain | Session 2. Complements the architecture-doc workshop |
+| **4 · Working on a Large Codebase** — technical debt, understanding legacy code | Session 5, Outward dimension. Pairs directly with the [Legacy Code Migration](case-studies/README.md#3--legacy-code-migration) case study |
+| **5 · Collaborating Inside an AI-Powered Team** — adopting AI, team organization, security risks | Sessions 6–9, and the dev shop mental model from Session 1 |
+| **Appendix 1 · Demystifying Large Language Models** | Useful pre-reading for students without an ML background |
+
+**Why the title is the point.** *Process Over Magic* names the failure mode this
+course exists to correct — treating a stochastic system as a magical one, and
+being surprised when it behaves stochastically. If you take one idea from it,
+take "One Prompt, One Commit": it makes prompt changes reviewable, revertable,
+and attributable, which is what turns prompting from a habit into engineering.
+
+---
+
 ## Related courses
 
 ### Building a Coding Agent From Scratch — *Decoding AI*
