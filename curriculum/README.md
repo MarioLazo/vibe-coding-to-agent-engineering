@@ -8,6 +8,11 @@ dedicated time for research, iteration, and polish before the final presentation
 > **The core question, asked of every design decision in this course:**
 > **Would you deploy this agent on a Tuesday at 3pm?**
 
+The mental models behind the curriculum are set out in
+**[philosophy.md](philosophy.md)** — painkiller not vitamin, invert, vertical
+slice, test drive the Ferrari, the three O's. Worth reading before Session 1;
+they explain why the course is sequenced the way it is.
+
 ---
 
 ## The 3-project arc
@@ -74,8 +79,8 @@ Builds team awareness early.
 
 ### Session 2 — Design & Pre-Mortem
 
-The pre-mortem is one of the highest-value exercises in the course. **Specificity
-is the whole game.**
+The pre-mortem is **inversion with a deadline** — don't ask how it works, ask how
+it fails, and do it before the budget is spent. Specificity is the whole game.
 
 > ❌ "The agent might fail."
 > ✅ "The agent will hallucinate function signatures when given files with no type
@@ -93,6 +98,11 @@ actually considered. Model choice, autonomy level, and what the agent may touch
 are all worth a record from day one — and by Session 5 most students have their
 first *reversal* to write, which is the more valuable document. See
 [Module 12](../docs/12-decision-records.md).
+
+Cover **black swans and typical events** both. You won't predict the black swan
+correctly — that isn't the point. Asking the question provokes the recall:
+someone says *"oh, we forgot about X."* X was always there; nobody had a reason to
+say it out loud.
 
 *Reference:* [IAM Modernization](../case-studies/README.md#1--iam-modernization) —
 what skipping the pre-mortem costs.
@@ -159,8 +169,10 @@ window-overflow. See [Module 11](../docs/11-context-engineering.md).
 ### Sessions 10–12 — The Orchestration Arc
 
 **Start with minimum viable orchestration** — two agents, one handoff, working.
-Students who attempt the full system in one session typically finish with nothing
-running.
+This is the [vertical slice](philosophy.md#do-a-vertical-slice): one thin cut
+through every layer rather than building each layer horizontally and integrating
+at the end. Students who attempt the full system in one session typically finish
+with nothing running.
 
 Session 11's chaos testing is the eye-opener: deliberately kill an agent
 mid-workflow and observe. The goal is graceful degradation, not perfection.

@@ -52,12 +52,26 @@ which is the technical complement to this course.
 
 | If you want to… | Go to |
 |---|---|
+| Understand how I actually work | **[Operating Philosophy](curriculum/philosophy.md)** |
 | See the full 15-week plan | **[Curriculum](curriculum/README.md)** |
 | Understand the frameworks | **[Frameworks](frameworks/README.md)** |
 | Read what goes wrong in production | **[Case Studies](case-studies/README.md)** |
 | Go deeper on advanced topics | **[Part II modules](#-part-ii--advanced-modules)** |
 | Check a claim | **[References](REFERENCES.md)** |
 | Just start building | **[Exercises](exercises/README.md)** |
+
+---
+
+## 💭 The philosophy underneath
+
+A few of the mental models this course is built on — full set in
+**[curriculum/philosophy.md](curriculum/philosophy.md)**:
+
+- **Be a painkiller, not a vitamin.** A vitamin gets deprioritized the moment budgets tighten.
+- **Invert, invert, invert.** Ask how it fails before asking how it works. Most of what I know came from post-mortems, not launches.
+- **Test drive the Ferrari.** Put a working prototype in front of people early — unless they're invested, they don't apply themselves, and every gap surfaces at the end as a surprise.
+- **Do a vertical slice.** One thin cut end-to-end beats building each layer horizontally and integrating at the end.
+- **Going live is the only metric that counts.** You can sing and dance and do anything; at the end of the day you need to go live.
 
 ---
 
